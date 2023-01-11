@@ -86,4 +86,15 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .outlines {
+
+    .isFavourite{
+      color: $primary;
+    }
+
+    .isComparable{
+      color: $primary;
+    }
+  }
 }
