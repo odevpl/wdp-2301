@@ -11,42 +11,75 @@
     display: flex;
     align-items: center;
     position: relative;
+    width: 250px;
+
 
     .icon:first-child {
       color: $primary;
       position: absolute;
       left: 10px;
-      z-index: 0;
+      z-index: 2;
     }
 
     .icon:last-child {
       position: absolute;
       right: 10px;
-      z-index: 0;
+      z-index: 2;
     }
 
-    select {
+    .visibleList {
       -webkit-appearance: none;
-      border: 0;
       background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
+      padding: 0px 0px 0px 10px;
+      position: absolute;
       z-index: 1;
       font-size: 14px;
       font-weight: 500;
       outline: none;
+      list-style: none;
+    }
+
+    .hiddenList {
+      display: none;
+      list-style: disc;
     }
   }
   // add hover on .category div element
   .category:hover{
-    background-color: $text-color;
+    background-color: $header-topbar-bg;
 
-    select{
+    .visibleList {
       color: $select-hover-text-color;
+      background-color: $header-topbar-bg;
+      width: 251px;
+      padding: 0 0 10px 41px;
+      margin-left: -41px;
+      z-index: 1;
+      border-radius: 20%;
+
+
+      .hiddenList {
+        display: block;
+        color: $select-hover-text-color;
+        z-index: 1;
+        padding-top: 5px;
+      }
     }
+
     svg{
       color:$select-hover-text-color;
+      z-index: 1;
     }
+  }
+
+  .hiddenCategory{
+    display: none;
+    list-style: disc;
+    padding-right: 20px;
+  }
+
+  .visibleCategory:hover .hiddenCategory{
+    display: block;
   }
 
   .searchField {
