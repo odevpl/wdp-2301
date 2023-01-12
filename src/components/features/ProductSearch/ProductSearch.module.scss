@@ -40,12 +40,14 @@
   // add hover on .category div element
   .category:hover{
     background-color: $text-color;
-
+    @extend %hoverEffect;
     select{
       color: $select-hover-text-color;
+      @extend %hoverEffect;
     }
     svg{
       color:$select-hover-text-color;
+      @extend %hoverEffect;
     }
   }
 
