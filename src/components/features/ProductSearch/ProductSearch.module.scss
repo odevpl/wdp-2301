@@ -47,6 +47,7 @@
   // add hover on .category div element
   .category:hover{
     background-color: $header-topbar-bg;
+    @extend %hoverEffect;
 
     .visibleList {
       color: $select-hover-text-color;
@@ -56,13 +57,14 @@
       margin-left: -41px;
       z-index: 1;
       border-radius: 20%;
-
+      @extend %hoverEffect;
 
       .hiddenList {
         display: block;
         color: $select-hover-text-color;
         z-index: 1;
         padding-top: 5px;
+        @extend %hoverEffect;
       }
     }
 

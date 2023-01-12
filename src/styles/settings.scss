@@ -21,3 +21,7 @@ $text-color: #2a2a2a;
 $form-border-color: #292929;
 
 $select-hover-text-color: #ffffff;
+
+%hoverEffect {
+  transition: 250ms;
+}
