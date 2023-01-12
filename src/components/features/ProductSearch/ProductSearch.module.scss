@@ -46,6 +46,7 @@
   }
   // add hover on .category div element
   .category:hover{
+<<<<<<< HEAD
     background-color: $header-topbar-bg;
     @extend %hoverEffect;
 
@@ -66,11 +67,22 @@
         padding-top: 5px;
         @extend %hoverEffect;
       }
+=======
+    background-color: $text-color;
+    @extend %hoverEffect;
+    select{
+      color: $select-hover-text-color;
+      @extend %hoverEffect;
+>>>>>>> 0fdf0a5d169275b30e468b28f3632df5f20bbc60
     }
 
     svg{
       color:$select-hover-text-color;
+<<<<<<< HEAD
       z-index: 1;
+=======
+      @extend %hoverEffect;
+>>>>>>> 0fdf0a5d169275b30e468b28f3632df5f20bbc60
     }
   }
 
