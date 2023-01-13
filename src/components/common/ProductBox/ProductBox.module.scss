@@ -7,10 +7,12 @@
 
   &:hover .photo .buttons {
     visibility: visible;
+    @extend %hoverEffect;
   }
 
   &:hover .actions div:last-child {
     background-color: $primary;
+    @extend %hoverEffect;
   }
 
   .photo {
