@@ -8,6 +8,9 @@ export const getNew = ({ products }) =>
 export const getProductCompare = ({ products }) =>
   products.filter(product => product.isComparable === true);
 
+export const getCountProductsCompare = ({ products }) =>
+  products.filter(product => product.isComparable === true).length;
+
 /* actions */
 const createActionName = actionName => `app/products/${actionName}`;
 const ADD_PRODUCT_COMPARE = createActionName('ADD_PRODUCT_COMPARE');
