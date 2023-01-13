@@ -13,33 +13,33 @@ const ProductSearch = () => {
   const categories = useSelector(getAll);
 
   return (
-  <form action='' className={styles.root}>
-    <div className={styles.category}>
-      <FontAwesomeIcon className={styles.icon} icon={faListUl} />
+    <form action='' className={styles.root}>
+      <div className={styles.category}>
+        <FontAwesomeIcon className={styles.icon} icon={faListUl} />
         <ul>
           <li className={styles.visibleList}>
             Select a category
             {categories.map(category => (
-            <ul className={styles.hiddenList}>
-              <li className={styles.visibleCategory}>{category.name}
-                <ul className={styles.hiddenCategory}>
-                  <li>{category.name} category</li>
-                </ul>
-              </li>
-            </ul>
+              <ul className={styles.hiddenList}>
+                <li className={styles.visibleCategory}>{category.name}
+                  <ul className={styles.hiddenCategory}>
+                    <li>{category.name} category</li>
+                  </ul>
+                </li>
+              </ul>
             ))}
           </li>
         </ul>
-      <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
-    </div>
-    <div className={styles.searchField}>
-      <input placeholder='Search products...' type='text' />
-      <button>
-        <FontAwesomeIcon className={styles.icon} icon={faSearch} />
-      </button>
-    </div>
-  </form>
-)};
+        <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+      </div>
+      <div className={styles.searchField}>
+        <input placeholder='Search products...' type='text' />
+        <button>
+          <FontAwesomeIcon className={styles.icon} icon={faSearch} />
+        </button>
+      </div>
+    </form>
+  );};
 
 ProductSearch.propTypes = {
   children: PropTypes.node,
