@@ -1,15 +1,10 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
   background-color: $footer-bg;
   bottom: 0;
   max-height: 200px;
   position: sticky;
-  z-index: 99;
-  :global(.container) > * {
-    height: 200px;
-  }
 
   .row {
     display: flex;
@@ -45,10 +40,12 @@
     }
 
     &:hover {
+      @extend %hoverEffect;
       .icon {
         display: block;
         &:hover {
           color: red;
+          @extend %hoverEffect;
         }
       }
     }
@@ -70,6 +67,7 @@
 
     &:hover {
       background-color: $primary;
+      @extend %hoverEffect;
     }
   }
 }
