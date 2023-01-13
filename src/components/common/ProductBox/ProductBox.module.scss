@@ -5,6 +5,14 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
 
+  &:hover .photo .buttons {
+    visibility: visible;
+  }
+
+  &:hover .actions div:last-child {
+    background-color: $primary;
+  }
+
   .photo {
     position: relative;
     padding: 10px 0 10px;
@@ -32,6 +40,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -75,5 +84,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .oldPrice {
+      text-decoration: line-through;
+      color: #a5a5a5;
+      text-decoration-color: $text-color;
+    }
+  }
+
+  .outlines {
+
+    .isFavourite{
+      color: $primary;
+    }
+
+    .isComparable{
+      color: $primary;
+    }
   }
 }
