@@ -91,6 +91,7 @@ NewFurniture.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
+      photo: PropTypes.string,
       category: PropTypes.string,
       price: PropTypes.number,
       stars: PropTypes.number,
