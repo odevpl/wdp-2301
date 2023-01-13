@@ -1,0 +1,75 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+  background-color: $footer-bg;
+  bottom: 0;
+  max-height: 200px;
+  position: sticky;
+  z-index: 99;
+  :global(.container) > * {
+    height: 200px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }    
+
+  .col_10 {
+    display: flex;
+    flex: 80% 0;
+  }
+
+  .col_3 {
+    display: flex;
+    flex: 25% 0 0;
+    justify-content: center;
+  }
+
+  .col_2 {
+    flex: 0 20%;
+  }
+
+  .image {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    align-items: flex-end;
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      .icon {
+        display: block;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+
+    .icon {
+      height: 25px;
+      width: 25px;
+      display: none;
+      color: $primary;
+      margin-left: 150px;
+      cursor: pointer;
+    }
+
+  .btn {
+    text-decoration: none;
+    background-color: $primary;
+    margin-top: 70px;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
