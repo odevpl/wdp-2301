@@ -5,6 +5,19 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
 
+<<<<<<< HEAD
+=======
+  &:hover .photo .buttons {
+    visibility: visible;
+    @extend %hoverEffect;
+  }
+
+  &:hover .actions div:last-child {
+    background-color: $primary;
+    @extend %hoverEffect;
+  }
+
+>>>>>>> 0fdf0a5d169275b30e468b28f3632df5f20bbc60
   .photo {
     position: relative;
     padding: 10px 0 10px;
