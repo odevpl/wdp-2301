@@ -10,6 +10,7 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
 import ProductPage from './components/views/ProductPage/ProductPage';
+import ProductsCompareContainer from './components/features/ProductsCompare/ProductsCompareContainer';
 
 const App = () => (
   <Provider store={store}>
@@ -21,6 +22,7 @@ const App = () => (
           <Route exact path={'/product/:productId'} component={ProductPage} />
         </Switch>
       </MainLayout>
+      <ProductsCompareContainer />
     </BrowserRouter>
   </Provider>
 );
