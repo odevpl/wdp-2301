@@ -12,7 +12,11 @@ class NewFurniture extends React.Component {
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ fade: false });
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+      this.setState({ fade: true });
+    }, 500);
   }
 
   handlePageCountChange(newCount) {
@@ -46,7 +50,11 @@ class NewFurniture extends React.Component {
 
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ fade: false });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+      this.setState({ fade: true });
+    }, 750);
   }
 
   render() {
@@ -98,7 +106,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className={'row ' + styles.productsBox}>
+            <div className={`row ${styles.productsBox} ${fade ? styles.fadeIn : styles.fadeOut}`}>
               {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
                 <div key={item.id} className='col-12 col-md-6 col-lg-3'>
                   <ProductBox {...item} />

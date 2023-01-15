@@ -101,6 +101,16 @@
   }
 }
 
+.fadeIn {
+  opacity: 1;
+  transition: opacity 750ms;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
 /* media */
 @media (max-width: 767px) {
   .root {
