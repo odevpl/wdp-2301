@@ -76,3 +76,16 @@
     }
   }
 }
+
+/* media */
+@media (max-width: 767px) {
+  .content {
+    height: 83px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content {
+    height: 90px;
+  }
+}

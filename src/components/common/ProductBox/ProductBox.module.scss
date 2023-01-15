@@ -25,6 +25,12 @@
       repeat: no-repeat;
     }
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     overflow: hidden;
     align-items: flex-end;
 
@@ -42,6 +48,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -85,5 +92,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .oldPrice {
+      text-decoration: line-through;
+      color: #a5a5a5;
+      text-decoration-color: $text-color;
+    }
+  }
+
+  .outlines {
+
+    .isFavourite{
+      color: $primary;
+    }
+
+    .isComparable{
+      color: $primary;
+    }
   }
 }
