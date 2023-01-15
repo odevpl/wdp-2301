@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
-import clsx from 'clsx';
 
 class NewFurniture extends React.Component {
   state = {
@@ -13,7 +12,11 @@ class NewFurniture extends React.Component {
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ fade: false });
+    setTimeout(() => {
+      this.setState({ activePage: newPage });
+      this.setState({ fade: true });
+    }, 500);
   }
 
   handleCategoryChange(newCategory) {
@@ -21,7 +24,7 @@ class NewFurniture extends React.Component {
     setTimeout(() => {
       this.setState({ activeCategory: newCategory });
       this.setState({ fade: true });
-    }, 1000);
+    }, 750);
   }
 
   render() {
@@ -72,7 +75,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className={clsx('row', fade ? styles.fadeIn : styles.fadeOut)}>
+          <div className={`row ${fade ? styles.fadeIn : styles.fadeOut}`}>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-12 col-md-6 col-lg-3'>
                 <ProductBox {...item} />
