@@ -20,6 +20,7 @@ const ProductSearch = () => {
           <li className={styles.visibleList}>
             Select a category
             {categories.map(category => (
+              <ul className={styles.hiddenList}>
               <ul className={styles.hiddenList} key={category.id}>
                 <li className={styles.visibleCategory}>{category.name}
                   <ul className={styles.hiddenCategory}>
