@@ -9,6 +9,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     pageCount: 0,
+    fade: true,
   };
 
   handlePageChange(newPage) {
@@ -24,30 +25,31 @@ class NewFurniture extends React.Component {
   }
 
   getCurrentPageCountLength = () => {
-    let length = this.props.products.filter(item => item.category === this.state.activeCategory).length/8;
+    let length =
+      this.props.products.filter(item => item.category === this.state.activeCategory)
+        .length / 8;
     return length;
   };
 
-  leftAction = (e) => {
-    if(this.state.activePage>0) {
-      let page= this.state.activePage - 1;
-      this.setState({activePage: page});
+  leftAction = e => {
+    if (this.state.activePage > 0) {
+      let page = this.state.activePage - 1;
+      this.setState({ activePage: page });
     }
     e.preventDefault();
   };
 
-  rightAction = (e) => {
+  rightAction = e => {
     let currentPageCount = this.getCurrentPageCountLength();
     let active = this.state.activePage;
-    let activeToSet = active+1;
+    let activeToSet = active + 1;
 
     this.handlePageCountChange(currentPageCount);
-    if(activeToSet < currentPageCount) {
+    if (activeToSet < currentPageCount) {
       this.handlePageChange(activeToSet);
     }
     e.preventDefault();
   };
-
 
   handleCategoryChange(newCategory) {
     this.setState({ fade: false });
@@ -59,7 +61,7 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, fade } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -79,7 +81,10 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Swipeable leftAction={this.leftAction.bind()} rightAction={this.rightAction.bind(this)}>
+      <Swipeable
+        leftAction={this.leftAction.bind()}
+        rightAction={this.rightAction.bind(this)}
+      >
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
@@ -106,16 +111,22 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className={`row ${styles.productsBox} ${fade ? styles.fadeIn : styles.fadeOut}`}>
-              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-                <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+            <div
+              className={`row ${styles.productsBox} ${
+                fade ? styles.fadeIn : styles.fadeOut
+              }`}
+            >
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
             </div>
           </div>
         </div>
-      </ Swipeable>
+      </Swipeable>
     );
   }
 }
@@ -133,7 +144,6 @@ NewFurniture.propTypes = {
       id: PropTypes.string,
       name: PropTypes.string,
       photo: PropTypes.object,
-      category: PropTypes.string,
       price: PropTypes.number,
       stars: PropTypes.number,
       promo: PropTypes.string,

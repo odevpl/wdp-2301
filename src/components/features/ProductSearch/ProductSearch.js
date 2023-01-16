@@ -9,8 +9,7 @@ import { getAll } from '../../../redux/categoriesRedux';
 import { useSelector } from 'react-redux';
 
 const ProductSearch = () => {
-
-  const categories = useSelector(getAll);
+  //const categories = useSelector(getAll);
 
   return (
     <form action='' className={styles.root}>
@@ -19,8 +18,7 @@ const ProductSearch = () => {
         <ul>
           <li className={styles.visibleList}>
             Select a category
-            {categories.map(category => (
-              <ul className={styles.hiddenList}>
+            {/*{categories.map(category => (
               <ul className={styles.hiddenList} key={category.id}>
                 <li className={styles.visibleCategory}>{category.name}
                   <ul className={styles.hiddenCategory}>
@@ -28,7 +26,7 @@ const ProductSearch = () => {
                   </ul>
                 </li>
               </ul>
-            ))}
+            ))}*/}
           </li>
         </ul>
         <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
@@ -40,7 +38,8 @@ const ProductSearch = () => {
         </button>
       </div>
     </form>
-  );};
+  );
+};
 
 ProductSearch.propTypes = {
   children: PropTypes.node,
