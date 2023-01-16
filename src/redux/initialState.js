@@ -298,6 +298,16 @@ const initialState = {
       isFavourite: true,
       isComparable: false,
     },
+    {
+      id: 'aenean-ru-bristique-24',
+      name: 'Aenean Ru Bristique 24',
+      category: 'chair',
+      photo: <img src={`${process.env.PUBLIC_URL}/images/image12.png`} alt='image12' />,
+      price: 30,
+      stars: 2,
+      promo: 'sale',
+      newFurniture: true,
+    },
   ],
   cart: {
     products: [],
