@@ -8,6 +8,31 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
+  promotions: [
+    {
+      id: '20percent',
+      title: 'GUEST ROOM',
+      description: 'SOFA',
+      value: '-20%',
+      photo: <img src={`${process.env.PUBLIC_URL}/images/sofa.jpeg`} alt='sofa' />,
+    },
+    {
+      id: '30percent',
+      title: 'OFFICE',
+      description: 'CHAIR',
+      value: '$200.00',
+      photo: <img src={`${process.env.PUBLIC_URL}/images/chair.jpeg`} alt='sofa' />,
+    },
+    {
+      id: '30percent',
+      title: 'SPECIAL',
+      description: 'COLLECTION',
+      value: '-45%',
+      photo: <img src={`${process.env.PUBLIC_URL}/images/bed.jpeg`} alt='sofa' />,
+    },
+  ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -19,8 +44,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      isFavourite: false,
+      isFavourite: true,
       isComparable: false,
+      promotion:'20percent',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -31,8 +57,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      isFavourite: false,
+      isFavourite: true,
       isComparable: false,
+      promotion:'30percent',
     },
     {
       id: 'aenean-ru-bristique-3',
