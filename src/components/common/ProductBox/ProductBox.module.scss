@@ -97,6 +97,12 @@
       color: #a5a5a5;
       text-decoration-color: $text-color;
     }
+    .buttonHover {
+      cursor: pointer;
+    }
+    .isActive {
+      background: $primary;
+    }
   }
 
   .outlines {
