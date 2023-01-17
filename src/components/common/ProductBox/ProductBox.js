@@ -80,7 +80,7 @@ const ProductBox = ({
               }
             }}
             variant='outline'
-            className={`${isComparable == true ? `${styles.isComparable}` : ''}`}
+            className={`${isComparable === true ? `${styles.isComparable}` : ''}`}
           >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
