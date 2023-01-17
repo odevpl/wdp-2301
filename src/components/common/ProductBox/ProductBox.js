@@ -80,7 +80,7 @@ const ProductBox = ({
               }
             }}
             variant='outline'
-            className={`${isComparable == true ? `${styles.isComparable}` : ''}`}
+            className={`${isComparable === true ? `${styles.isComparable}` : ''}`}
           >
             <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
@@ -88,7 +88,7 @@ const ProductBox = ({
         {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
         <div className={styles.price}>
           <Button noHover variant='small'>
-          $ {price}
+            $ {price}
           </Button>
         </div>
       </div>

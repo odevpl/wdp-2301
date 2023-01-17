@@ -9,7 +9,6 @@ import { getAll } from '../../../redux/categoriesRedux';
 import { useSelector } from 'react-redux';
 
 const ProductSearch = () => {
-
   const categories = useSelector(getAll);
 
   return (
@@ -20,9 +19,9 @@ const ProductSearch = () => {
           <li className={styles.visibleList}>
             Select a category
             {categories.map(category => (
-              <ul className={styles.hiddenList}>
               <ul className={styles.hiddenList} key={category.id}>
-                <li className={styles.visibleCategory}>{category.name}
+                <li className={styles.visibleCategory}>
+                  {category.name}
                   <ul className={styles.hiddenCategory}>
                     <li>{category.name} category</li>
                   </ul>
@@ -40,7 +39,8 @@ const ProductSearch = () => {
         </button>
       </div>
     </form>
-  );};
+  );
+};
 
 ProductSearch.propTypes = {
   children: PropTypes.node,
