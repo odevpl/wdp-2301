@@ -8,7 +8,7 @@ describe('Component ProductSearch', () => {
   it('should render without crashing', () => {
     const component = shallow(
       <Provider store={store}>
-        <ProductSearch />;
+        <ProductSearch />
       </Provider>
     );
     expect(component).toBeTruthy();
