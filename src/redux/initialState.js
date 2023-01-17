@@ -33,6 +33,108 @@ const initialState = {
     },
   ],
 
+  brands: [
+    {
+      id: 'brand-1',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand1.png`} alt='brand1' />
+      ),
+    },
+    {
+      id: 'brand-2',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand2.png`} alt='brand2' />
+      ),
+    },
+    {
+      id: 'brand-3',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand3.png`} alt='brand3' />
+      ),
+    },
+    {
+      id: 'brand-4',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand4.png`} alt='brand4' />
+      ),
+    },
+    {
+      id: 'brand-5',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand5.png`} alt='brand5' />
+      ),
+    },
+    {
+      id: 'brand-6',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand6.png`} alt='brand6' />
+      ),
+    },
+    {
+      id: 'brand-7',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand7.png`} alt='brand7' />
+      ),
+    },
+    {
+      id: 'brand-8',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand8.png`} alt='brand8' />
+      ),
+    },
+    {
+      id: 'brand-9',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/brands/brand9.png`} alt='brand9' />
+      ),
+    },
+    {
+      id: 'brand-10',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brands/brand10.png`}
+          alt='brand10'
+        />
+      ),
+    },
+    {
+      id: 'brand-11',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brands/brand11.png`}
+          alt='brand11'
+        />
+      ),
+    },
+    {
+      id: 'brand-12',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brands/brand12.png`}
+          alt='brand12'
+        />
+      ),
+    },
+    {
+      id: 'brand-13',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brands/brand13.png`}
+          alt='brand13'
+        />
+      ),
+    },
+    {
+      id: 'brand-14',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brands/brand14.png`}
+          alt='brand14'
+        />
+      ),
+    },
+  ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -46,7 +148,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
-      promotion:'20percent',
+      promotion: '20percent',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -59,7 +161,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
-      promotion:'30percent',
+      promotion: '30percent',
     },
     {
       id: 'aenean-ru-bristique-3',
