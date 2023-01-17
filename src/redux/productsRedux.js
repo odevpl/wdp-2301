@@ -1,6 +1,7 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getAllFeedback = ({ feedback }) => feedback;
 
 /* actions */
 const createActionName = actionName => `app/products/${actionName}`;

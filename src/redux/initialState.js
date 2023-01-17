@@ -312,6 +312,29 @@ const initialState = {
   cart: {
     products: [],
   },
+  feedback: [
+    {
+      id: '1',
+      author: 'John Smith',
+      content: 'Lorem Ipsum',
+      profilePicture: <img src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`} alt='image3' />,
+      clientCompany: 'Furniture client',
+    },
+    {
+      id: '2',
+      author: 'John Poul',
+      content: 'Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum',
+      profilePicture: <img src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`} alt='image3' />,
+      clientCompany: 'Furniture client',
+    },
+    {
+      id: '3',
+      author: 'Ben Smith',
+      content: 'Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum',
+      profilePicture: <img src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`} alt='image3' />,
+      clientCompany: 'Furniture client',
+    },
+  ],
 };
 
 export default initialState;
