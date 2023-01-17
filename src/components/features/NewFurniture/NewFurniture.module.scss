@@ -4,6 +4,7 @@
   .panelBar {
     margin-bottom: 30px;
     position: relative;
+    width: 950px;
 
     :global(.row) > * {
       border-bottom: 4px solid #e2e2e2;
@@ -99,6 +100,16 @@
       }
     }
   }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 750ms;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 /* media */
