@@ -49,7 +49,7 @@ const Swipeable = ({children, leftAction, rightAction}) => {
         <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
       </Button>
 
-      <div
+      <div className={styles.children}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
