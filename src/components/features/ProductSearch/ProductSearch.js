@@ -17,7 +17,7 @@ const ProductSearch = () => {
         <FontAwesomeIcon className={styles.icon} icon={faListUl} />
         <ul>
           <li className={styles.visibleList}>
-            Select a category
+            <span className={styles.hide}>Select a category</span>
             {categories.map(category => (
               <ul className={styles.hiddenList} key={category.id}>
                 <li className={styles.visibleCategory}>
