@@ -534,9 +534,11 @@ const initialState = {
       isComparable: false,
     },
   ],
+
   cart: {
     products: [],
   },
+
   feedback: [
     {
       id: '1',
@@ -544,7 +546,7 @@ const initialState = {
       content: 'Lorem Ipsum',
       profilePicture: (
         <img
-          src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`}
+          src={`${process.env.PUBLIC_URL}/images/feedback/profilePicture.jpeg`}
           alt='image3'
         />
       ),
@@ -556,7 +558,7 @@ const initialState = {
       content: 'Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum',
       profilePicture: (
         <img
-          src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`}
+          src={`${process.env.PUBLIC_URL}/images/feedback/profilePicture2.jpeg`}
           alt='image3'
         />
       ),
@@ -569,7 +571,7 @@ const initialState = {
         'Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum',
       profilePicture: (
         <img
-          src={`${process.env.PUBLIC_URL}/images/profilePicture.jpeg`}
+          src={`${process.env.PUBLIC_URL}/images/feedback/profilePicture3.jpeg`}
           alt='image3'
         />
       ),

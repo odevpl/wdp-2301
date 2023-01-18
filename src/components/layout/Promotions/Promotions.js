@@ -13,7 +13,7 @@ const Promotions = () => {
           {promotions[0].photo}
           <p className={styles.titleOfPromotion}>
             {promotions[0].title} <br></br>
-            <p className={styles.description}>{promotions[0].description}</p>
+            <span className={styles.description}>{promotions[0].description}</span>
           </p>
           <p className={styles.valueOfPromotion}>{promotions[0].value}</p>
         </div>
