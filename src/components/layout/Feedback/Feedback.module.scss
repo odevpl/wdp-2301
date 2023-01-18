@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  font-size: large;
 }
 
 .feedbackContent {
@@ -18,29 +19,25 @@
 }
 
 .profilePicture img{
-  max-width: 100px;
+  max-width: 150px;
   max-height: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
+  margin: 20px 10px 20px 0;
 }
 
 .clientCompany {
-  display: flex;
   margin-top: 70px;
   margin-left: -90px;
 }
 
 .author {
   font-weight: 600;
-  display: flex;
   margin-top: 50px;
+  margin-left: 10px;
 }
 
 .heading {
   position: relative;
-  display: flex;
-  flex: 0.94;
+  flex: 1;
 
   h3 {
     color: $primary;
@@ -63,6 +60,7 @@
 
 .root {
   position: relative;
+  width: 1140px;
 
   :global(.row) > * {
     border-bottom: 4px solid #e2e2e2;
@@ -70,7 +68,7 @@
 
   .dots {
     position: absolute;
-    right: 20%;
+    right: 0%;
     top: 4%;
     display: flex;
 
@@ -102,4 +100,14 @@
     }
   }
 }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 750ms;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 500ms;
 }
