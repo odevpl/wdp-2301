@@ -6,13 +6,25 @@
   height: 45px;
   color: $text-color;
 
+  @media (max-width: 575.98px) {
+    max-width: 340px;
+
+    .hide {
+      display: none;
+    }
+
+    button {
+      position: absolute;
+      margin-left: 250px;
+    }
+  }
+
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
     width: 250px;
-
 
     .icon:first-child {
       color: $primary;
@@ -44,8 +56,9 @@
       list-style: disc;
     }
   }
+
   // add hover on .category div element
-  .category:hover{
+  .category:hover {
     background-color: $header-topbar-bg;
     @extend %hoverEffect;
 
@@ -68,20 +81,20 @@
       }
     }
 
-    svg{
-      color:$select-hover-text-color;
+    svg {
+      color: $select-hover-text-color;
       z-index: 1;
       @extend %hoverEffect;
     }
   }
 
-  .hiddenCategory{
+  .hiddenCategory {
     display: none;
     list-style: disc;
     padding-right: 20px;
   }
 
-  .visibleCategory:hover .hiddenCategory{
+  .visibleCategory:hover .hiddenCategory {
     display: block;
   }
 

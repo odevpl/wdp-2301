@@ -1,6 +1,7 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getAllFeedback = ({ feedback }) => feedback;
 export const getAllPromotions = ({ promotions }) => promotions;
 
 /* actions */
