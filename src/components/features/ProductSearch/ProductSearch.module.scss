@@ -7,7 +7,16 @@
   color: $text-color;
 
   @media (max-width: 575.98px) {
-    display: block;
+    max-width: 340px;
+
+    .hide {
+      display: none;
+    }
+
+    button {
+      position: absolute;
+      margin-left: 250px;
+    }
   }
 
   .category {
