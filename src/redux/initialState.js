@@ -144,6 +144,7 @@ const initialState = {
       oldPrice: 35,
       price: 30,
       stars: 2,
+      userStars: 3,
       promo: 'sale',
       newFurniture: true,
       isFavourite: true,
