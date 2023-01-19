@@ -9,12 +9,17 @@ const createActionName = actionName => `app/products/${actionName}`;
 const TOGGLE_FAVOURITE = createActionName('TOGGLE_FAVOURITE');
 const ADD_PRODUCT_COMPARE = createActionName('ADD_PRODUCT_COMPARE');
 const REMOVE_PRODUCT_COMPARE = createActionName('REMOVE_PRODUCT_COMPARE');
+const UPDATE_PRODUCT_RATE = createActionName('UPDATE_PRODUCT_RATE');
 
 /* action creators */
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 export const toggleFavourite = payload => ({
   type: TOGGLE_FAVOURITE,
+  payload,
+});
+export const updateProductRate = payload => ({
+  type: UPDATE_PRODUCT_RATE,
   payload,
 });
 
@@ -46,6 +51,15 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product =>
         product.id === action.payload
           ? { ...product, isFavourite: !product.isFavourite }
+          : product
+      );
+    case UPDATE_PRODUCT_RATE:
+      return statePart.map(product =>
+        product.id === action.payload.id
+          ? {
+            ...product,
+            userStars: action.payload.userStars,
+          }
           : product
       );
     default:
