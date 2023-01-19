@@ -64,11 +64,24 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewportWidth } = this.props;
     const { activeCategory, activePage, fade } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(
+      viewportWidth > 991
+        ? categoryProducts.length / 8
+        : viewportWidth > 767
+        ? categoryProducts.length / 3
+        : categoryProducts.length / 2
+    );
+
+    const desktopElements = categoryProducts.slice(
+      activePage * 8,
+      (activePage + 1) * 8
+    );
+    const tabletElements = categoryProducts.slice(activePage * 3, (activePage + 1) * 3);
+    const mobileElements = categoryProducts.slice(activePage * 2, (activePage + 1) * 2);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -120,13 +133,16 @@ class NewFurniture extends React.Component {
                 fade ? styles.fadeIn : styles.fadeOut
               }`}
             >
-              {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
-                .map(item => (
-                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+              {(viewportWidth > 991
+                ? desktopElements
+                : viewportWidth > 767
+                ? tabletElements
+                : mobileElements
+              ).map(item => (
+                <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -155,6 +171,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  viewportWidth: PropTypes.number,
 };
 
 NewFurniture.defaultProps = {

@@ -681,6 +681,7 @@ const initialState = {
       clientCompany: 'Furniture client',
     },
   ],
+  width: {},
 };
 
 export default initialState;
