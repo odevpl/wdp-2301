@@ -34,7 +34,11 @@ class NewFurniture extends React.Component {
   leftAction = e => {
     if (this.state.activePage > 0) {
       let page = this.state.activePage - 1;
-      this.setState({ activePage: page });
+      this.setState({ fade: false });
+      setTimeout(() => {
+        this.setState({ activePage: page });
+        this.setState({ fade: true });
+      }, 500);
     }
     e.preventDefault();
   };
@@ -69,7 +73,7 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={dots}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -82,7 +86,7 @@ class NewFurniture extends React.Component {
 
     return (
       <Swipeable
-        leftAction={this.leftAction.bind()}
+        leftAction={this.leftAction.bind(this)}
         rightAction={this.rightAction.bind(this)}
       >
         <div className={styles.root}>
