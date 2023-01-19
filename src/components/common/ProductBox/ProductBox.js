@@ -35,8 +35,10 @@ const ProductBox = ({
   return (
     <div className={styles.root}>
       <div className={styles.photo}>
-        {photo}
-        {promo && <div className={styles.sale}>{promo}</div>}
+        <a href={'/product/' + id}>
+          {photo}
+          {promo && <div className={styles.sale}>{promo}</div>}
+        </a>
         <div className={styles.buttons}>
           <Button variant='small'>Quick View</Button>
           <Button variant='small'>
