@@ -184,8 +184,8 @@
    }
 
    .valueOfPromotionBox3{
-    left: 60%;
-    top: 73%;
+    left: 59%;
+    top: 67%;
    }
 
    .descriptionBox2{
@@ -194,8 +194,22 @@
    }
 
    .descriptionBox3 {
-    margin-left: -13%;
-    margin-top: -1%;
+    margin-left: -4%;
+    margin-top: -55%;
    }
  }
+}
+
+@media (max-width: 575px) {
+  .promotions{
+
+    .valueOfPromotionBox2{
+      top: 30%;
+    }
+
+    .valueOfPromotionBox3{
+      left: 30%;
+      top: 70%;
+    }
+  }
 }
