@@ -1,6 +1,5 @@
 @import "../../../styles/settings.scss";
 
-// positioning
 .promotions {
   display: flex;
   justify-content: space-around;
@@ -51,7 +50,6 @@
     height: 100%;
   }
 
-  // layout
   .titleOfPromotion{
     position: absolute;
     left: 10%;
@@ -118,8 +116,8 @@
 
   .valueOfPromotionBox3{
     position: absolute;
-    top: 75%;
-    left: 75%;
+    top: 80%;
+    left: 52%;
     font-weight: 700;
     z-index: 1;
     color: black;
@@ -138,8 +136,8 @@
 
   .descriptionBox2 {
     position: absolute;
-    top: 50%;
-    left: 54%;
+    top: 51%;
+    left: 80%;
     bottom: -14%;
     transform: translate(-50%, -50%);
     color:black;
@@ -151,7 +149,7 @@
 
   .descriptionBox3 {
     position: absolute;
-    top: 85%;
+    top: 65%;
     left: 75%;
     bottom: -14%;
     transform: translate(-50%, -50%);
@@ -165,5 +163,39 @@
   .nopadding{
     padding-right: -15px;
     padding-left: -15px;
+ }
+}
+
+@media (max-width: 768px){
+ .promotions{
+   flex-direction: column;
+   width: 750px;
+   height: auto;
+   display: flex;
+   align-items: flex-start;
+   position: relative;
+
+   .valueOfPromotion{
+    bottom: 18%;
+   }
+
+   .valueOfPromotionBox2{
+    top: 17%;
+   }
+
+   .valueOfPromotionBox3{
+    left: 60%;
+    top: 73%;
+   }
+
+   .descriptionBox2{
+    margin-bottom: 2px;
+    margin-left: 9%;
+   }
+
+   .descriptionBox3 {
+    margin-left: -13%;
+    margin-top: -1%;
+   }
  }
 }
