@@ -4,10 +4,9 @@ import styles from './Swipeable.module.scss';
 import Button from '../Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import {useSwipeable} from 'react-swipeable';
+import { useSwipeable } from 'react-swipeable';
 
-const Swipeable = ({children, leftAction, rightAction}) => {
-
+const Swipeable = ({ children, leftAction, rightAction }) => {
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -31,25 +30,26 @@ const Swipeable = ({children, leftAction, rightAction}) => {
   });
 
   const onTouchEnd = () => {
-    if(!touchStart || !touchEnd) return;
+    if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minDistanceSwipe;
-    const isRightSwipe = distance <- minDistanceSwipe;
-    if (isLeftSwipe){
+    const isRightSwipe = distance < -minDistanceSwipe;
+    if (isLeftSwipe) {
       rightAction();
     }
-    if (isRightSwipe){
+    if (isRightSwipe) {
       leftAction();
     }
   };
 
   return (
     <div className={styles.swipeable}>
-      <Button variant="outline" onClick={leftAction} className={styles.swipButton}>
-        <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+      <Button variant='outline' onClick={leftAction} className={styles.swipButton}>
+        <FontAwesomeIcon icon={faArrowLeft} className={styles.icon}></FontAwesomeIcon>
       </Button>
 
-      <div className={styles.children}
+      <div
+        className={styles.children}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -58,8 +58,8 @@ const Swipeable = ({children, leftAction, rightAction}) => {
         {children}
       </div>
 
-      <Button variant="outline" onClick={rightAction} className={styles.swipButton}>
-        <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+      <Button variant='outline' onClick={rightAction} className={styles.swipButton}>
+        <FontAwesomeIcon icon={faArrowRight} className={styles.icon}></FontAwesomeIcon>
       </Button>
     </div>
   );
