@@ -51,7 +51,9 @@ const Feedback = () => {
         <a
           onClick={() => handlePageChange(i)}
           className={i === activePage && styles.active}
-        ></a>
+        >
+          {' '}
+        </a>
       </li>
     );
   }
