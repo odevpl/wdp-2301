@@ -72,16 +72,16 @@ class NewFurniture extends React.Component {
       viewportWidth > 991
         ? categoryProducts.length / 8
         : viewportWidth > 767
-        ? categoryProducts.length / 3
-        : categoryProducts.length / 2
+        ? categoryProducts.length / 2
+        : categoryProducts.length / 1
     );
 
     const desktopElements = categoryProducts.slice(
       activePage * 8,
       (activePage + 1) * 8
     );
-    const tabletElements = categoryProducts.slice(activePage * 3, (activePage + 1) * 3);
-    const mobileElements = categoryProducts.slice(activePage * 2, (activePage + 1) * 2);
+    const tabletElements = categoryProducts.slice(activePage * 2, (activePage + 1) * 2);
+    const mobileElements = categoryProducts.slice(activePage * 1, (activePage + 1) * 1);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
