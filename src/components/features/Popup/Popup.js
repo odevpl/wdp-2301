@@ -10,7 +10,6 @@ const Popup = ({ open, onClose, productBox }) => {
   return (
     <div className={styles.popup}>
       <div onClick={onClose} className={styles.overlay}>
-        kupa
         <div
           onClick={e => {
             e.stopPropagation();
