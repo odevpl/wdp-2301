@@ -42,6 +42,7 @@
     width: 100%;
     height: 50%;
     padding: 15px 0 15px 0;
+    position: relative;
   }
 
   .box2 img {
@@ -78,9 +79,9 @@
 
   .titleOfPromotionBox3 {
     position: absolute;
-    top: 85%;
-    left: 45%;
-    bottom: -30%;
+    top: 45%;
+    left: 20%;
+    bottom: -35%;
     transform: translate(-50%, -50%);
     color: hotpink;
     font-weight: 750;
@@ -104,7 +105,7 @@
 
   .valueOfPromotionBox2{
     position: absolute;
-    top: 24%;
+    top: 54%;
     left: 32%;
     font-weight: 700;
     z-index: 1;
@@ -116,8 +117,8 @@
 
   .valueOfPromotionBox3{
     position: absolute;
-    top: 80%;
-    left: 52%;
+    top: 40%;
+    left: 5%;
     font-weight: 700;
     z-index: 1;
     color: black;
@@ -137,8 +138,9 @@
   .descriptionBox2 {
     position: absolute;
     top: 51%;
-    left: 80%;
-    bottom: -14%;
+    right: -100%;
+    left: 170px;
+    bottom: -8%;
     transform: translate(-50%, -50%);
     color:black;
     margin-top: -15px;
@@ -166,7 +168,7 @@
  }
 }
 
-@media (max-width: 768px){
+@media (max-width: 764px){
  .promotions{
    flex-direction: column;
    width: 750px;
@@ -184,12 +186,12 @@
    }
 
    .valueOfPromotionBox3{
-    left: 59%;
-    top: 67%;
+    left: 20%;
+    top: 15%;
    }
 
    .descriptionBox2{
-    margin-bottom: 2px;
+    margin-bottom: 15px;
     margin-left: 9%;
    }
 
@@ -208,8 +210,18 @@
     }
 
     .valueOfPromotionBox3{
-      left: 30%;
-      top: 70%;
+      left: 10%;
+      top: 20%;
+    }
+
+    .descriptionBox3{
+      top: 80.5%;
+      left: 240px;
+    }
+
+    .descriptionBox2{
+      top: 45%;
+      left: 160px;
     }
   }
 }
