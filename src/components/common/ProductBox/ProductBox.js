@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,28 +9,38 @@ import clsx from 'clsx';
 import { useDispatch } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
+import Popup from '../../features/Popup/Popup';
 
-const ProductBox = ({
-  name,
-  price,
-  promo,
-  stars,
-  userStars,
-  photo,
-  isFavourite,
-  isComparable,
-  oldPrice,
-  id,
-  addProductCompare,
-  removeProductCompare,
-  countProductsCompare,
-}) => {
+const ProductBox = props => {
+  const {
+    name,
+    price,
+    promo,
+    stars,
+    userStars,
+    photo,
+    isFavourite,
+    isComparable,
+    oldPrice,
+    id,
+    addProductCompare,
+    removeProductCompare,
+    countProductsCompare,
+  } = props;
+
   const dispatch = useDispatch();
   const productId = id;
+
   const handleClick = e => {
     e.preventDefault();
     dispatch(toggleFavourite(productId));
   };
+
+  const handleClickProduct = e => {
+    e.preventDefault();
+  };
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className={styles.root}>
@@ -39,12 +49,19 @@ const ProductBox = ({
           {photo}
           {promo && <div className={styles.sale}>{promo}</div>}
         </a>
-        <div className={styles.buttons}>
-          <Button variant='small'>Quick View</Button>
+        <div className={styles.buttons} onClick={handleClickProduct}>
+          <Button variant='small' onClick={e => setOpenModal(true)}>
+            Quick View
+          </Button>
           <Button variant='small'>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
+        <Popup
+          open={openModal}
+          onClose={() => setOpenModal(false)}
+          productBox={props}
+        />
       </div>
       <div className={styles.content}>
         <h5>{name}</h5>
