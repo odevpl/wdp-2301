@@ -17,9 +17,11 @@
   padding-left: 25px;
   padding-top: 20px;
   margin: 2px;
+  accent-color: black;
 
   span{
     margin-left: -120px;
+    font-weight: 600;
   }
 }
 
@@ -45,7 +47,7 @@
   }
 
   .checkBoxInput {
-
+    accent-color: black;
     margin-top: -40px;
 
     input {
@@ -69,13 +71,22 @@
   align-items: center;
   margin: 40px 25px 0 25px;
 
-  button {
+  a {
+    text-decoration: none;
+  }
+
+  .button {
     font-size: small;
     color: #fff;
     padding: 10px 20px 10px 20px;
     border: none;
-    border-radius: 2%;
+    border-radius: 7%;
     background-color: $primary;
+    text-decoration: none;
+
+    &:hover{
+      opacity: 0.9;
+    }
   }
 }
 
@@ -140,4 +151,18 @@ input:checked + .slider:before {
   margin-left: 40px;
   margin-top: -3px;
   font-size: small;
+}
+
+.regulations{
+  color: $primary;
+  text-decoration: none;
+}
+
+.singleInput{
+  .choseAll{
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+  }
 }

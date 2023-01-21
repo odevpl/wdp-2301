@@ -7,9 +7,9 @@ const Register = () => {
       <div className={styles.register}>
         <div className={styles.formulage}>
           <div className={styles.checkAccount}>
-            <input type='radio' placeholder='Mam konto' />
+            <input type='radio' />
             <span> Mam konto</span>
-            <input type='radio' placeholder='Nie mam konta' />
+            <input type='radio' />
             <span> Nie mam konta</span>
           </div>
           <label>Podaj dane do rejestracji</label>
@@ -28,11 +28,19 @@ const Register = () => {
             <div className={styles.checkBoxInput}>
               <div className={styles.singleInput}>
                 <input type='checkbox' />
-                <label> Zaznacz wszystkie</label>
+                <label className={styles.choseAll}> Zaznacz wszystkie</label>
               </div>
               <div className={styles.singleInput}>
                 <input type='checkbox' />
-                <label> Akceptuje warunki regulaminu*</label>
+                <label>
+                  {' '}
+                  Akceptuje warunki
+                  <a href='#' className={styles.regulations}>
+                    {' '}
+                    regulaminu
+                  </a>
+                  *
+                </label>
               </div>
               <div className={styles.singleInput}>
                 <input type='checkbox' />
@@ -42,7 +50,9 @@ const Register = () => {
             <div className={styles.navigation}>
               <a href='/'>{'<'} Wróć</a>
               <a href='/'>
-                <button className={styles.button}>Zarejestruj się</button>
+                <button type='button' className={styles.button}>
+                  Zarejestruj się
+                </button>
               </a>
             </div>
           </form>
