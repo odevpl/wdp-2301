@@ -67,7 +67,7 @@ const Popup = ({ open, onClose, productBox }) => {
 };
 
 Popup.propTypes = {
-  open: PropTypes.func,
+  open: PropTypes.bool,
   onClose: PropTypes.func,
   productBox: PropTypes.object,
 };
