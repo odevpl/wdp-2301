@@ -13,7 +13,7 @@ const Login = () => {
           </div>
           <div className={styles.inputGroup}>
             <label className={styles.loginLabel}>Hasło</label>
-            <input className={styles.loginInput} />
+            <input className={styles.loginInput} type='password' name='hasło' />
           </div>
           <div>
             <p>
