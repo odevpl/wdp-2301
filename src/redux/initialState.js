@@ -682,6 +682,97 @@ const initialState = {
     },
   ],
   width: {},
+
+  posts: [
+    {
+      id: 'post-2',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog2.jpg`} alt='blog2' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-3',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog3.jpg`} alt='blog3' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-4',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog4.jpg`} alt='blog4' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-5',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog5.jpg`} alt='blog5' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-6',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog6.jpg`} alt='blog6' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-7',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog7.jpg`} alt='blog7' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-7',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog7.jpg`} alt='blog7' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
+      id: 'post-8',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog8.jpg`} alt='blog8' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+  ],
 };
 
 export default initialState;

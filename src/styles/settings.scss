@@ -3,7 +3,9 @@ $gray: #363636;
 $darkGray: #2a2a2a;
 $orange: #d58e32;
 $darkerGray: #292929;
-
+$gold: #D58E32;
+$goldLight: #d8ae77;
+$darkGold: #d47f10;
 // ABOVE VARIABLES DON'T USE
 
 $base-padding: 24px;
@@ -25,3 +27,8 @@ $select-hover-text-color: #ffffff;
 %hoverEffect {
   transition: 250ms;
 }
+
+/* LOGIN */
+$main-login-color: $gold;
+$main-login-light: $goldLight;
+$main-login-dark: $darkGold;

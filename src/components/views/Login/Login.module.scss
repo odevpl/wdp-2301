@@ -1,0 +1,80 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 5% 0;
+  height: 700px;
+  background-color: rgb(55, 133, 206);
+}
+
+.button {
+  background-color: $main-login-color;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  color: #110d0a;
+  font-weight: bold;
+  border: 0.5px solid rgb(252, 249, 249);
+  box-shadow: 1px 1px 2px rgb(255, 254, 254);
+}
+
+.wrapper {
+  border-top: 5px solid $main-login-color;
+  width: 540px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.form {
+  padding: 40px;
+  font-size: 14px;
+  background-color: $select-hover-text-color;
+  border-radius: 5px;
+}
+
+.loginLabel {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.loginInput {
+  width: 100%;
+  padding: 8px;
+  border: 0.5px solid rgb(10, 9, 5);
+  border-radius: 5px;
+}
+
+p {
+  font-size: 15px;
+
+  a {
+    color: rgb(53, 142, 201);
+  }
+}
+
+
+@media (min-width: 300px) {
+  .root {
+    display: flex;
+}
+}
