@@ -13,7 +13,7 @@ const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
     <Promotions />
-    <NewFurniture />
+    <NewFurniture countProducts={8} />
     <Gallery />
     <LatestBlog />
     <BrandBoxes />
