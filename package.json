@@ -68,7 +68,8 @@
     "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
     "sass": "^1.54.3",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "use-local-storage": "^2.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

@@ -83,8 +83,10 @@ class NewFurniture extends React.Component {
         ? categoryProducts.length / countProducts
         : viewportWidth > 767
         ? // eslint-disable-next-line indent
+          // eslint-disable-next-line indent
           categoryProducts.length / 2
         : // eslint-disable-next-line indent
+          // eslint-disable-next-line indent
           categoryProducts.length / 1
     );
 
