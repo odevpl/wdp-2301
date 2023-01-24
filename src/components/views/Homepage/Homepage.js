@@ -7,12 +7,14 @@ import Promotions from '../../layout/Promotions/Promotions';
 import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
 import ChatBot from '../../features/ChatBot/ChatBot';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
+import Gallery from '../../features/Gallery/Gallery';
 
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
     <Promotions />
     <NewFurniture />
+    <Gallery />
     <LatestBlog />
     <BrandBoxes />
     <Feedback />

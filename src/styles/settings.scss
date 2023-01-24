@@ -6,6 +6,9 @@ $darkerGray: #292929;
 $gold: #D58E32;
 $goldLight: #d8ae77;
 $darkGold: #d47f10;
+$white: #ffffff;
+$lightGray2: #e2e2e2;
+$green: #87c037;
 // ABOVE VARIABLES DON'T USE
 
 $base-padding: 24px;
@@ -32,3 +35,12 @@ $select-hover-text-color: #ffffff;
 $main-login-color: $gold;
 $main-login-light: $goldLight;
 $main-login-dark: $darkGold;
+
+/* GALLERY */
+$gallery-background: $white;
+$gallery-border: $lightGray2;
+$gallery-text-main: $darkGray;
+$gallery-button: $green;
+
+
+
