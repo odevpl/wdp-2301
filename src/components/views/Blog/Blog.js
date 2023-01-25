@@ -1,5 +1,3 @@
-// import PropTypes from 'prop-types';
-
 import {
   faArchive,
   faCalendarAlt,
@@ -111,7 +109,5 @@ const Blog = () => {
     </div>
   );
 };
-
-// Blog.propTypes = {};
 
 export default Blog;
