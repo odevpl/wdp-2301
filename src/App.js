@@ -15,6 +15,7 @@ import Blog from './components/views/Blog/Blog';
 import Login from './components/views/Login/Login';
 import Register from './components/views/Register/Register';
 import Search from './components/views/Search/Search';
+import Cart from './components/views/Cart/Cart';
 
 const App = () => (
   <Provider store={store}>
@@ -28,6 +29,7 @@ const App = () => (
           <Route exact path={'/blog'} component={Blog} />
           <Route exact path={'/register'} component={Register} />
           <Route exact path={'/search'} component={Search} />
+          <Route exact path={'/cart'} component={Cart} />
         </Switch>
       </MainLayout>
       <ProductsCompareContainer />
