@@ -7,6 +7,7 @@ import productsReducer from './productsRedux';
 import brandsReducer from './brandsRedux';
 import widthReducer from './widthRedux';
 import postsReducer from './postsRedux';
+import hotDealsReducer from './hotDealsRedux';
 
 // define reducers
 const reducers = {
@@ -16,6 +17,7 @@ const reducers = {
   brands: brandsReducer,
   width: widthReducer,
   posts: postsReducer,
+  hotDeals: hotDealsReducer,
 };
 
 // add blank reducers for initial state properties without reducers

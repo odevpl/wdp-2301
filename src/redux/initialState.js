@@ -1,6 +1,41 @@
 import React from 'react';
 
 const initialState = {
+  hotDeals: [
+    {
+      id: 'aenean-ru-bristique-1',
+      name: 'Aenean Ru Bristique',
+      photoLeft:
+        'https://media.istockphoto.com/id/1199428736/pl/zdj%C4%99cie/turkusowe-krzes%C5%82o-rami%C4%99-izolowane-na-bia%C5%82ym-tle-widok-z-przodu-tapicerowanego-sofy.jpg?s=612x612&w=0&k=20&c=cDy8FBg6pec4y6quiEhHAcUhyO9_k1kZNctorO06JEk=',
+      category: 'bed',
+      oldPrice: 35,
+      price: 30,
+      stars: 2,
+      userStars: 3,
+      promo: 'sale',
+      newFurniture: true,
+      isFavourite: true,
+      isComparable: false,
+      promotion: '20percent',
+    },
+    {
+      id: 'aenean-ru-bristique-2',
+      name: 'Aenean Ru Bristique',
+      photoRight:
+        'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: 'bed',
+      oldPrice: 35,
+      price: 30,
+      stars: 2,
+      userStars: 3,
+      promo: 'sale',
+      newFurniture: true,
+      isFavourite: true,
+      isComparable: false,
+      promotion: '20percent',
+    },
+  ],
+
   categories: [
     { id: 'bed', name: 'Bed' },
     { id: 'chair', name: 'Chair' },

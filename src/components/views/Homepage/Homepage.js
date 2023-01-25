@@ -8,9 +8,11 @@ import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
 import ChatBot from '../../features/ChatBot/ChatBot';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 import Gallery from '../../features/Gallery/Gallery';
+import PromotionBoxes from '../../features/PromotionBoxes/PromotionBoxes';
 
 const Homepage = () => (
   <div className={styles.root}>
+    <PromotionBoxes />
     <FeatureBoxes />
     <Promotions />
     <NewFurniture countProducts={8} />
