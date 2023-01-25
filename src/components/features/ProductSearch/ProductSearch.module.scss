@@ -102,6 +102,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    padding-right: 10px;
 
     input {
       border: 0;
@@ -118,6 +119,7 @@
       border: 0;
       background-color: transparent;
       outline: none;
+
     }
   }
 }
