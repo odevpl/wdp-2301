@@ -8,8 +8,8 @@ const initialState = {
       photoLeft:
         'https://media.istockphoto.com/id/1199428736/pl/zdj%C4%99cie/turkusowe-krzes%C5%82o-rami%C4%99-izolowane-na-bia%C5%82ym-tle-widok-z-przodu-tapicerowanego-sofy.jpg?s=612x612&w=0&k=20&c=cDy8FBg6pec4y6quiEhHAcUhyO9_k1kZNctorO06JEk=',
       category: 'bed',
-      oldPrice: 35,
-      price: 30,
+      oldPrice: 350,
+      price: 300,
       stars: 2,
       userStars: 3,
       promo: 'sale',
