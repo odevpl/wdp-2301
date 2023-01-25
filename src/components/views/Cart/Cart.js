@@ -1,13 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styles from './Cart.module.scss';
-import {
-  faHome,
-  faMobileAlt,
-  faShoppingBasket,
-  faTimesCircle,
-  faCheckCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
   return (
@@ -41,7 +35,10 @@ const Cart = () => {
                 <button className={styles.btnDelete}>
                   <FontAwesomeIcon className={styles.icon} icon={faTimesCircle} />
                 </button>
-                <img src={`${process.env.PUBLIC_URL}/images/image3.png`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/image3.png`}
+                  alt='productPhoto'
+                />
                 Placeholder Product 7
               </td>
               <td className={styles.priceStyle}>$5.00</td>
@@ -57,7 +54,10 @@ const Cart = () => {
                 <button>
                   <FontAwesomeIcon className={styles.icon} icon={faTimesCircle} />
                 </button>
-                <img src={`${process.env.PUBLIC_URL}/images/image3.png`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/image3.png`}
+                  alt='productPhoto'
+                />
                 Placeholder Product 4
               </td>
               <td className={styles.priceStyle}>$67.00</td>
@@ -73,7 +73,10 @@ const Cart = () => {
                 <button>
                   <FontAwesomeIcon className={styles.icon} icon={faTimesCircle} />
                 </button>
-                <img src={`${process.env.PUBLIC_URL}/images/image3.png`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/image3.png`}
+                  alt='productPhoto'
+                />
                 Placeholder Product 8 - Black, Amber 65
               </td>
               <td className={styles.priceStyle}>$20.00</td>
