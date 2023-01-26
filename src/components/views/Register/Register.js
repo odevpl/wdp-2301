@@ -125,7 +125,7 @@ const Register = () => {
               name='name'
               placeholder='Imię *'
               minLength='3'
-              maxLength='20'
+              maxLength='30'
             ></input>
             {error.name && <span className={styles.error}>{error.name}</span>}
 
@@ -138,7 +138,7 @@ const Register = () => {
               onChange={onInputChange}
               onBlur={validateInput}
               minLength='3'
-              maxLength='20'
+              maxLength='30'
             ></input>
             {error.surname && <span className={styles.error}>{error.surname}</span>}
 
