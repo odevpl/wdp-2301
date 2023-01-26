@@ -49,17 +49,15 @@ export default function reducer(statePart = [], action = {}) {
       );
     case TOGGLE_FAVOURITE:
       return statePart.map(product =>
-        product.id === action.payload
-          ? { ...product, isFavourite: !product.isFavourite }
-          : product
+        product.id === action.payload.id ? { ...product, ...action.payload } : product
       );
     case UPDATE_PRODUCT_RATE:
       return statePart.map(product =>
         product.id === action.payload.id
           ? {
-            ...product,
-            userStars: action.payload.userStars,
-          }
+              ...product,
+              userStars: action.payload.userStars,
+            }
           : product
       );
     default:

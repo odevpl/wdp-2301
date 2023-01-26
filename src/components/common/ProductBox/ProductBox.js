@@ -36,7 +36,8 @@ const ProductBox = props => {
 
   useEffect(() => {
     dispatch(toggleFavourite({ id: productId, isFavorite: isFav }));
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFav]);
 
   const handleClick = e => {
     e.preventDefault();
