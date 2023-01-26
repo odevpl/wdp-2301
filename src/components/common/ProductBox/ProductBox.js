@@ -6,10 +6,11 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import clsx from 'clsx';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
 import Popup from '../../features/Popup/Popup';
+import { addProduct, getAll } from '../../../redux/cartRedux';
 
 const ProductBox = props => {
   const {
@@ -26,6 +27,7 @@ const ProductBox = props => {
     addProductCompare,
     removeProductCompare,
     countProductsCompare,
+    addProduct,
   } = props;
 
   const dispatch = useDispatch();
@@ -38,6 +40,11 @@ const ProductBox = props => {
 
   const handleClickProduct = e => {
     e.preventDefault();
+  };
+
+  const handleAddProduct = e => {
+    e.preventDefault();
+    dispatch(addProduct({ name, id, price, photo }));
   };
 
   const [openModal, setOpenModal] = useState(false);
@@ -53,7 +60,7 @@ const ProductBox = props => {
           <Button variant='small' onClick={e => setOpenModal(true)}>
             Quick View
           </Button>
-          <Button variant='small'>
+          <Button variant='small' onClick={handleAddProduct}>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
@@ -118,6 +125,7 @@ ProductBox.propTypes = {
   addProductCompare: PropTypes.func,
   removeProductCompare: PropTypes.func,
   countProductsCompare: PropTypes.func,
+  addProduct: PropTypes.func,
 };
 
 export default ProductBox;

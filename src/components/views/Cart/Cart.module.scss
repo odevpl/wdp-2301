@@ -72,8 +72,18 @@
 
 button{
   border: none;
+  border: transparent;
   background: transparent;
   color: $primary;
+
+  &:focus{
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    color: red;
+  }
 }
 
 .productTableHead, tr{
@@ -175,6 +185,11 @@ button{
     width: 100%;
     margin-left: 4%;
     border-radius: 3px;
+
+    &:hover{
+      background-color: rgb(9, 174, 9);
+      opacity: 1;
+    }
   }
 
   .subtotal {

@@ -6,6 +6,7 @@ import {
   addProductCompare,
   removeProductCompare,
 } from '../../../redux/productsRedux';
+import { addProduct } from '../../../redux/cartRedux.js';
 
 const mapStateToProps = state => ({
   products: getAll(state),
@@ -15,6 +16,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   addProductCompare: id => dispatch(addProductCompare(id)),
   removeProductCompare: id => dispatch(removeProductCompare(id)),
+  addProduct: id => dispatch(addProduct(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);
