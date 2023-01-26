@@ -5,8 +5,10 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique',
-      photoLeft:
-        'https://media.istockphoto.com/id/1199428736/pl/zdj%C4%99cie/turkusowe-krzes%C5%82o-rami%C4%99-izolowane-na-bia%C5%82ym-tle-widok-z-przodu-tapicerowanego-sofy.jpg?s=612x612&w=0&k=20&c=cDy8FBg6pec4y6quiEhHAcUhyO9_k1kZNctorO06JEk=',
+      miniPhoto:
+        'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=600',
+      photo:
+        'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'bed',
       oldPrice: 350,
       price: 300,
@@ -21,8 +23,28 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique',
-      photoRight:
+      miniPhoto:
+        'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=600',
+      photo:
         'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      category: 'bed',
+      oldPrice: 35,
+      price: 30,
+      stars: 2,
+      userStars: 3,
+      promo: 'sale',
+      newFurniture: true,
+      isFavourite: true,
+      isComparable: false,
+      promotion: '20percent',
+    },
+    {
+      id: 'aenean-ru-bristique-2',
+      name: 'Aenean Ru Bristique',
+      miniPhoto:
+        'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=600',
+      photo:
+        'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'bed',
       oldPrice: 35,
       price: 30,
