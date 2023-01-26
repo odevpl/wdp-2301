@@ -3,41 +3,16 @@
 .root {
   background-color: $footer-bg;
   bottom: 0;
-  max-height: 200px;
+  max-height: 250px;
   position: sticky;
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-  }    
-
-  .col_10 {
-    display: flex;
-    flex: 80% 0;
-  }
-
-  .col_3 {
-    display: flex;
-    flex: 25% 0 0;
-    justify-content: center;
-  }
-
-  .col_2 {
-    flex: 0 20%;
-  }
+  z-index: 1;
 
   .image {
     position: relative;
-    height: 200px;
+    height: 180px;
     width: 200px;
     overflow: hidden;
     align-items: flex-end;
-    img {
-      width: 80%;
-      height: 80%;
-      object-fit: cover;
-    }
 
     &:hover {
       @extend %hoverEffect;
@@ -49,21 +24,42 @@
         }
       }
     }
+    img {
+      width: 80%;
+      height: 70%;
+      object-fit: contain;
+    }
+    h6 {
+      color: $primary;
+      margin-top: 25px;
+    }
   }
 
-    .icon {
-      height: 25px;
-      width: 25px;
-      display: none;
-      color: $primary;
-      margin-left: 150px;
-      cursor: pointer;
+
+
+  .icon {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display: none;
+    color: $primary;
+    margin-left: 150px;
+    cursor: pointer;
+  }
+
+  .content {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    color: $primary;
+    .price {
+      margin-left: 18px;
     }
+  }
 
   .btn {
     text-decoration: none;
     background-color: $primary;
-    margin-top: 70px;
+    margin-top: 95px;
 
     &:hover {
       background-color: $primary;
