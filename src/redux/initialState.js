@@ -28,8 +28,8 @@ const initialState = {
       photo:
         'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'bed',
-      oldPrice: 35,
-      price: 30,
+      oldPrice: 200,
+      price: 100,
       stars: 2,
       userStars: 3,
       promo: 'sale',
@@ -46,8 +46,8 @@ const initialState = {
       photo:
         'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       category: 'bed',
-      oldPrice: 35,
-      price: 30,
+      oldPrice: 400,
+      price: 250,
       stars: 2,
       userStars: 3,
       promo: 'sale',
