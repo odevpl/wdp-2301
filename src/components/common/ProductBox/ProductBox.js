@@ -36,7 +36,7 @@ const ProductBox = props => {
 
   useEffect(() => {
     dispatch(toggleFavourite({ id: productId, isFavorite: isFav }));
-  }, [isFav]);
+  });
 
   const handleClick = e => {
     e.preventDefault();
