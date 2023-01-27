@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
 import Popup from '../../features/Popup/Popup';
+import useLocalStorage from 'use-local-storage';
 
 const ProductBox = props => {
   const {
@@ -31,9 +32,16 @@ const ProductBox = props => {
   const dispatch = useDispatch();
   const productId = id;
 
+  const [isFav, setIsFav] = useLocalStorage(productId, isFavourite || false);
+
+  useEffect(() => {
+    dispatch(toggleFavourite({ id: productId, isFavorite: isFav }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFav]);
+
   const handleClick = e => {
     e.preventDefault();
-    dispatch(toggleFavourite(productId));
+    setIsFav(!isFav);
   };
 
   const handleClickProduct = e => {
@@ -73,7 +81,7 @@ const ProductBox = props => {
           <Button
             variant='outline'
             onClick={handleClick}
-            className={clsx(styles.buttonHover, isFavourite && styles.isActive)}
+            className={clsx(styles.buttonHover, isFav ? styles.isActive : '')}
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>

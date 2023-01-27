@@ -82,10 +82,8 @@ class NewFurniture extends React.Component {
       viewportWidth > 991
         ? categoryProducts.length / countProducts
         : viewportWidth > 767
-        ? // eslint-disable-next-line indent
-          categoryProducts.length / 2
-        : // eslint-disable-next-line indent
-          categoryProducts.length / 1
+        ? categoryProducts.length / 2
+        : categoryProducts.length / 1
     );
 
     const desktopElements = categoryProducts.slice(
@@ -144,24 +142,22 @@ class NewFurniture extends React.Component {
                   </div>
                 </div>
               </div>
-              <div
-                className={`row + ${styles.productsBox} ${
-                  fade ? styles.fadeIn : styles.fadeOut
-                }`}
-              >
-                {(viewportWidth > 991
-                  ? desktopElements
-                  : viewportWidth > 767
-                  ? // eslint-disable-next-line indent
-                    tabletElements
-                  : // eslint-disable-next-line indent
-                    mobileElements
-                ).map(item => (
-                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
-              </div>
+            </div>
+            <div
+              className={`row + ${styles.productsBox} ${
+                fade ? styles.fadeIn : styles.fadeOut
+              }`}
+            >
+              {(viewportWidth > 991
+                ? desktopElements
+                : viewportWidth > 767
+                ? tabletElements
+                : mobileElements
+              ).map(item => (
+                <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
             </div>
           </div>
         </div>
