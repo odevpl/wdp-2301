@@ -56,7 +56,7 @@ export default function reducer(statePart = [], action = {}) {
         product.id === action.payload.id
           ? {
               ...product,
-              userStars: action.payload.userStars,
+              serStars: action.payload.userStars,
             }
           : product
       );
