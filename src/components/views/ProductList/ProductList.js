@@ -11,7 +11,7 @@ const ProductList = () => {
       </div>
       <div className='row'>
         <div className='col-9'>Product List</div>
-        <div className='col-3'>Filters</div>
+        <div className='col-3'></div>
         <FilterCategory />
       </div>
       <div className='row'>
