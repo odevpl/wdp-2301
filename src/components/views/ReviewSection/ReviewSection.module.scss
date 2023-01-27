@@ -28,10 +28,14 @@
                 padding: 0;
             }
 
-            :hover {
+            .active {
                 border-bottom: none;
                 color: $orange;
-            }
+
+                a {
+                    color: $orange;
+                }
+              }
         }
 
         .revContent {
@@ -42,13 +46,14 @@
             }
 
             .addBtn {
+                display: flex;
+                margin-top: 15px;
                 text-decoration: none;
-                text-transform: uppercase;
-                margin-left: 20px;
+                color: black;
             }
 
             .rating {
-                padding-top: 15px;
+                padding-top: 20px;
             }
 
             .stars {
@@ -58,6 +63,7 @@
         }
 
         form {
+            padding: 20px 0;
 
             textarea {
                 display: flex;

@@ -31,7 +31,7 @@ class ReviewSection extends React.Component {
                     <a href='#'>Description</a>
                   </li>
                   <li className={styles.active}>
-                    <a href='#'>Reviews</a>
+                    <a href='#'>Reviews (0)</a>
                   </li>
                   <li>
                     <a href='#'>Specification</a>
@@ -48,6 +48,7 @@ class ReviewSection extends React.Component {
               <div className={styles.rating}>
                 <span>Your Rating</span>
                 <br />
+                <br />
                 <span>Bad</span>
                 <div className={styles.stars}>
                   <Stars />
@@ -55,7 +56,8 @@ class ReviewSection extends React.Component {
                 <span>Good</span>
               </div>
               <form className={styles.form}>
-                <textarea rows='3' placeholder='Write your review' />
+                <span>Your review</span>
+                <textarea rows='3' />
                 <input type='text' placeholder='Name*' />
                 <input type='text' placeholder='Email*' />
                 <div className={styles.continueBtn}>
