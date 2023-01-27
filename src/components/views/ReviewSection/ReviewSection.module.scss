@@ -42,7 +42,7 @@
             padding: 10px 40px;
 
             span {
-                opacity: 0.6
+                opacity: 0.9
             }
 
             .addBtn {
@@ -50,15 +50,22 @@
                 margin-top: 15px;
                 text-decoration: none;
                 color: black;
+                font-weight: 600;
             }
 
             .rating {
                 padding-top: 20px;
             }
 
-            .stars {
-                display: inline-flex;
-                margin: 0 9px;
+            .rattingStar {
+                display: inline;
+                padding: 0 15px;
+                
+                .stars {
+                    display: inline-flex;
+                    margin: 0 1px;
+                    color: $gold;
+                }
             }
         }
 
