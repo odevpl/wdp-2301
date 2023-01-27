@@ -11,7 +11,7 @@ const FilterCategory = () => {
         <div className='col-4'>
           <h5>FILTER BY CATEGORIES</h5>
           <hr />
-          <div className={styles.filter}>
+          <div className={styles.root}>
             <ul>
               <li className={styles.active}>
                 <FontAwesomeIcon icon={faAngleRight} />
