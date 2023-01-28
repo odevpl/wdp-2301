@@ -3,36 +3,43 @@ import React from 'react';
 const initialState = {
   hotDeals: [
     {
-      id: 'aenean-ru-bristique-1',
-      name: 'Aenean Ru Bristique',
-      photoLeft:
-        'https://media.istockphoto.com/id/1199428736/pl/zdj%C4%99cie/turkusowe-krzes%C5%82o-rami%C4%99-izolowane-na-bia%C5%82ym-tle-widok-z-przodu-tapicerowanego-sofy.jpg?s=612x612&w=0&k=20&c=cDy8FBg6pec4y6quiEhHAcUhyO9_k1kZNctorO06JEk=',
-      category: 'bed',
-      oldPrice: 350,
-      price: 300,
-      stars: 2,
-      userStars: 3,
-      promo: 'sale',
-      newFurniture: true,
-      isFavourite: true,
-      isComparable: false,
-      promotion: '20percent',
+      id: 'promote-1',
+      name: 'promote-1',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote1.jpeg`}
+          alt='promote1'
+        />
+      ),
+      title: 'INDOOR',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 50% OF ALL FURNITURE',
     },
     {
-      id: 'aenean-ru-bristique-2',
-      name: 'Aenean Ru Bristique',
-      photoRight:
-        'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      category: 'bed',
-      oldPrice: 35,
-      price: 30,
-      stars: 2,
-      userStars: 3,
-      promo: 'sale',
-      newFurniture: true,
-      isFavourite: true,
-      isComparable: false,
-      promotion: '20percent',
+      id: 'promote-2',
+      name: 'promote-2',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote2.jpg`}
+          alt='promote2'
+        />
+      ),
+      title: 'KITCHEN',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 40% OF ALL FURNITURE',
+    },
+    {
+      id: 'promote-3',
+      name: 'promote-3',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote3.jpg`}
+          alt='promote3'
+        />
+      ),
+      title: 'GARDEN',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 60% OF ALL FURNITURE',
     },
   ],
 
@@ -185,6 +192,7 @@ const initialState = {
       isFavourite: true,
       isComparable: false,
       promotion: '20percent',
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -583,6 +591,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-32',
@@ -652,6 +661,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
+      hotDeal: true,
     },
     {
       id: 'aenean-ru-bristique-36',
