@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { getDeals } from '../../../redux/hotDealsRedux';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComments, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import {
   faExchangeAlt,
   faEye,
