@@ -1,41 +1,49 @@
 import React from 'react';
-import styles from './FilterCategory.module.scss';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './FilterSizes.module.scss';
 
-const FilterCategory = () => {
+const FilterSizes = () => {
   return (
     <div className='container'>
       <div className='row'>
         <div className='col'></div>
         <div className='col-4'>
           <div className={styles.root}>
-            <h5>FILTER BY CATEGORIES</h5>
+            <h5>FILTER BY SIZES</h5>
             <hr />
             <ul>
               <li className={styles.active}>
-                <FontAwesomeIcon icon={faAngleRight} />
-                <h4>Furniture </h4>
+                <label>
+                  <input className={styles.active} type='checkbox' />
+                </label>
+                <h4>S</h4>
                 <span className={styles.productCount}>3</span>
               </li>
               <li>
-                <FontAwesomeIcon icon={faAngleRight} />
-                <h4>Sofa </h4>
+                <label>
+                  <input type='checkbox' />
+                </label>
+                <h4>M </h4>
                 <span className={styles.productCount}>3</span>
               </li>
               <li>
-                <FontAwesomeIcon icon={faAngleRight} />
-                <h4>Chair </h4>
+                <label>
+                  <input type='checkbox' />
+                </label>
+                <h4>L </h4>
                 <span className={styles.productCount}>3</span>
               </li>
               <li>
-                <FontAwesomeIcon icon={faAngleRight} />
-                <h4>Table </h4>
+                <label>
+                  <input type='checkbox' />
+                </label>
+                <h4>XL </h4>
                 <span className={styles.productCount}>3</span>
               </li>
               <li>
-                <FontAwesomeIcon icon={faAngleRight} />
-                <h4>Bedroom </h4>
+                <label>
+                  <input type='checkbox' />
+                </label>
+                <h4>XXL </h4>
                 <span className={styles.productCount}>3</span>
               </li>
             </ul>
@@ -46,4 +54,4 @@ const FilterCategory = () => {
   );
 };
 
-export default FilterCategory;
+export default FilterSizes;
