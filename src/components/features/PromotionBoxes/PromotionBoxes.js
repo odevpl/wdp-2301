@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { getDeals } from '../../../redux/hotDealsRedux';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faComments, faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import {
   faExchangeAlt,
   faEye,
@@ -70,14 +70,20 @@ const PromotionBoxes = () => {
           <div className='col-12 col-sm-12 col-md-6 col-lg-4'>
             <div className={styles.header}>
               <div className={styles.leftCol}>
+                <Button onClick={rightHot} leftAction={leftHot}>
+                  <ul className={styles.nextHot}>
+                    <li>
+                      <a />
+                    </li>
+                    <li>
+                      <a />
+                    </li>
+                    <li>
+                      <a />
+                    </li>
+                  </ul>
+                </Button>
                 <h1>HOT DEALS</h1>
-                <div className={styles.slideHot}>
-                  <Swipeable
-                    className={styles.swipeHot}
-                    rightAction={rightHot}
-                    leftAction={leftHot}
-                  />
-                </div>
                 <div className={styles.leftPhoto}>
                   <div className={styles.name}>
                     <img

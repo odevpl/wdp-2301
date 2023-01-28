@@ -8,17 +8,47 @@
     position: relative;
 }
 
+.dots {
+    color: white;
+}
+
 .leftCol {
     position: relative;
     height: 490px;
     border: 1px solid lightgray;
-
-    .slideHot {
+  
+      &::after {
+        content: "";
         position: absolute;
-        width: 100%;
+        bottom: 70px;
+        left: 50%;
+        width: 45px;
+        border-bottom: 4px solid #d58e32;
+      }
 
-        a {
-            color: white;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 70px;
+        left: 35px;
+        width: 80%;
+        border-bottom: 4px solid #e2e2e2;
+    }
+
+    .nextHot {
+        position: absolute;
+        display: flex;
+        top: 5px;
+        left: 75%;
+        width: 30%;
+        color: white;
+
+        ul {
+            display: inline-flex;
+        }
+
+        li {
+            padding-left: 15px;
         }
 
         :hover {
@@ -152,6 +182,7 @@
         margin: 15px 100px;
         padding: 0;
         font-size: 15px;
+        text-align: center;
 
         .stars {
             position: relative;
@@ -196,17 +227,18 @@
     }
     
     .shopNow {
+        font-size: 15px;
         text-decoration: none;
         position: absolute;
         text-align: center;
-        top: 65%;
+        top: 66%;
         left: 50%;
         width: 25%;
         transform: translate(-50%, -50%);
         color: black;
-        font-weight: 500;
+        font-weight:500;
         background-color: #ffffff;
-        padding: 20px;
+        padding: 10px;
     }
 
     .slider {
@@ -250,7 +282,29 @@
             width: 25%;
             transform: translate(-50%, -50%);
             color: black;
-            font-weight: 400;
+            font-weight: 500;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .rightCol {
+        width: 100%;
+        float: none;
+
+        .shopNow {
+            font-size: 15px;
+            text-decoration: none;
+            position: absolute;
+            text-align: center;
+            top: 70%;
+            left: 50%;
+            width: 35%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-weight: 500;
             background-color: #ffffff;
             padding: 10px;
         }
