@@ -6,11 +6,11 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import clsx from 'clsx';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
 import Popup from '../../features/Popup/Popup';
-import { addProduct, getAll } from '../../../redux/cartRedux';
+import { addProduct } from '../../../redux/cartRedux';
 
 const ProductBox = props => {
   const {
@@ -27,7 +27,6 @@ const ProductBox = props => {
     addProductCompare,
     removeProductCompare,
     countProductsCompare,
-    addProduct,
   } = props;
 
   const dispatch = useDispatch();
@@ -38,13 +37,9 @@ const ProductBox = props => {
     dispatch(toggleFavourite(productId));
   };
 
-  const handleClickProduct = e => {
-    e.preventDefault();
-  };
-
   const handleAddProduct = e => {
     e.preventDefault();
-    dispatch(addProduct({ name, id, price, photo }));
+    dispatch(addProduct({ id, name, photo, price }));
   };
 
   const [openModal, setOpenModal] = useState(false);
@@ -56,7 +51,7 @@ const ProductBox = props => {
           {photo}
           {promo && <div className={styles.sale}>{promo}</div>}
         </a>
-        <div className={styles.buttons} onClick={handleClickProduct}>
+        <div className={styles.buttons}>
           <Button variant='small' onClick={e => setOpenModal(true)}>
             Quick View
           </Button>
@@ -125,7 +120,6 @@ ProductBox.propTypes = {
   addProductCompare: PropTypes.func,
   removeProductCompare: PropTypes.func,
   countProductsCompare: PropTypes.func,
-  addProduct: PropTypes.func,
 };
 
 export default ProductBox;

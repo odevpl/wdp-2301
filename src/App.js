@@ -14,7 +14,7 @@ import ProductsCompareContainer from './components/features/ProductsCompare/Prod
 import Blog from './components/views/Blog/Blog';
 import Login from './components/views/Login/Login';
 import Register from './components/views/Register/Register';
-import Cart from './components/views/Cart/CartContainer';
+import Cart from './components/views/Cart/Cart';
 
 const App = () => (
   <Provider store={store}>
