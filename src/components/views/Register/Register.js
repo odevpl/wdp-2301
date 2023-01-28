@@ -22,12 +22,12 @@ const Register = () => {
   let history = useHistory();
   const handleClick = e => {
     if (
-      input.name.length == 0 ||
-      (input.name.length < 3 && input.surname.length == 0) ||
+      input.name.length === 0 ||
+      (input.name.length < 3 && input.surname.length === 0) ||
       (input.surname.length < 3 &&
-        input.email.length == 0 &&
-        input.password.length == 0) ||
-      (input.password.length < 3 && input.repeatPassword.length == 0) ||
+        input.email.length === 0 &&
+        input.password.length === 0) ||
+      (input.password.length < 3 && input.repeatPassword.length === 0) ||
       input.repeatPassword.length < 3
     ) {
       e.stopPropagation();
