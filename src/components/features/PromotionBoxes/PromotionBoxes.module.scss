@@ -9,46 +9,15 @@
 }
 
 .dots {
-    position: absolute;
-    right: 30px;
-    top: 0;
-    
-    ul {
-      margin: 0;
-      padding: 0 0 0 1rem;
-      list-style: none;
-      background-color: $darkerGray;
-      transform: translateY(10px);
-
-      li {
-        display: inline-block;
-        margin-left: 0.5rem;
-
-        a {
-          display: inline-block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: #e1e1e1;
-          font-size: 0;
-          margin: 2px;
-
-          &.active,
-          &:hover {
-            background-color: $primary;
-            @extend %hoverEffect;
-          }
-        }
-    }
-}
+    color: white;
 }
 
-.leftPhoto {
+.leftCol {
     position: relative;
-    height: 560px;
+    height: 490px;
     border: 1px solid lightgray;
-
-    &::after {
+  
+      &::after {
         content: "";
         position: absolute;
         bottom: 70px;
@@ -65,65 +34,78 @@
         width: 80%;
         border-bottom: 4px solid #e2e2e2;
     }
-    
-    .leftTitle {
-        background-color: $darkerGray;
-        
-        h1 {
-            color: #e2e2e2;
-            font-size: 18px;
-            margin: 0;
-            padding-left: 15px;
-            line-height: 40px;
-            width: 50%;
+
+    .nextHot {
+        position: absolute;
+        display: flex;
+        top: 5px;
+        left: 75%;
+        width: 30%;
+        color: white;
+
+        ul {
+            display: inline-flex;
+        }
+
+        li {
+            margin: 0 7px;
+        }
+
+        :hover {
+            color: orange;
+            background: none;
         }
     }
     
-    .leftCol {
-        
-        .leftImg {
+    .leftTitle,h1 {
+        background-color: $darkerGray;
+        color: #e2e2e2;
+        font-size: 18px;
+        margin: 0;
+        padding-left: 15px;
+        line-height: 40px;
+        width: 100%;
+    }
+    
+    .leftPhoto {
+
+        img {
+            object-fit: cover;
             width: 100%;
-            height: 100%;
+            height: 27vh;
         }
 
         .addCart {
             position: absolute;
             text-align: center;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             width: 100%;
-            padding: 1px;
+            top: 35%;
             visibility: hidden;
         }
 
         .endPromo {
             position: absolute;
             text-align: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             width: 100%;
+            top: 50%;
             visibility: hidden;
 
-            li {
-                background-color: $gray;
-                display: inline-block;
-                margin: 10px;
-                padding: 5px;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-            }
+            .timePromo {
+                position: relative;
+                display: inline-flex;
 
-            h1 {
-                color: white;
-                font-size: 15px;
-            }
-            
-            span {
-                font-weight: 700;
-                font-size: 23px;
+                p {
+                    color: white;
+                    border-radius: 50%;
+                    background-color: $darkerGray;
+                    padding: 9px;
+                    margin: 2px;
+
+                    span {
+                        display: block;
+                        font-size: 13px;
+                    }
+                }
             }
         }
 
@@ -133,82 +115,101 @@
                 visibility: visible;
             }
         }
-    }
 
-    .outline {
-        position: absolute;
-        top: 92%;
-        left: 15px;
+        .outline {
+            position: absolute;
+            top: 92%;
+            left: 15px;
+            
+            .faIcon {
+                margin-right: 2px;
+                margin-left: 2px;
+            }
+        }
         
-        .faIcon {
-            margin-right: 2px;
-            margin-left: 2px;
+        .promotion {
+            position: absolute;
+            top: 92%;
+            left: 63%;
+            display: inline-flex;
+    
+            span {
+                margin-top: 6px;
+                font-size: 15px;
+                text-align: center;
+                text-decoration: line-through;
+            }
+    
+            .promotionBtn {
+                position: relative;
+                margin-left: 3px;
+                font-size: 16px;
+                width: 100%;
+                text-align: center;
+                color: white;
+                background-color: black;
+                text-decoration: none;
+            }
+        }
+    
+        .name {
+            font-size: 20px;
+            text-align: center;
+        }
+
+    
+        .sliderOne {
+            position: absolute;
+            top: 0;
+            border: none;
+    
+            a {
+                padding-left: 2px;
+                padding-right: 2px;
+                color: white;
+                top: 1px;
+                left: 35%;
+            }
+    
+            :hover {
+                color:#d58e32;
+            }
         }
     }
     
-    .promotion {
-        position: absolute;
-        top: 92%;
-        left: 63%;
-        display: inline-flex;
-
-        span {
-            margin-top: 6px;
-            font-size: 15px;
-            text-align: center;
-            text-decoration: line-through;
-        }
-
-        .promotionBtn {
-            position: relative;
-            margin-left: 5px;
-            font-size: 20px;
-            width: 70px;
-            text-align: center;
-            color: white;
-            background-color: black;
-            text-decoration: none;
-        }
-    }
-
-    .name {
-        font-size: 20px;
+    .star {
+        position: relative;
+        margin: 15px 100px;
+        padding: 0;
+        font-size: 15px;
         text-align: center;
-    }
 
-    .stars {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-
-        a {
-            padding: 3px;
-            font-size: 20px;
+        .stars {
+            position: relative;
+            color: $darkerGray;
+            border-color: $gallery-border;
         }
     }
 }
 
 .rightCol {
-    background-position: center;
+    position: relative;
 
     .rightImg {
         width: 100%;
-        height: 530px;
+        height: 450px;
     }
     
     .rightTitle {
         color: white;
         position: absolute;
-        width: 96%;
+        width: 100%;
         text-align: center;
         padding: 40px 40px;
-        background-color: gray;
-        opacity: 0.8;
-        top: 50%;  
-        left: 50%;  
-        transform: translate(-50%, -50%);
+        background-color: #292929;
+        opacity: 0.7;
+        top: 50%;
+        transform: translate(0%, -50%);
 
         h1 {
             color: white;
@@ -226,29 +227,86 @@
     }
     
     .shopNow {
+        font-size: 15px;
         text-decoration: none;
         position: absolute;
         text-align: center;
-        top: 65%;
+        top: 66%;
         left: 50%;
         width: 25%;
         transform: translate(-50%, -50%);
         color: black;
-        font-weight: 500;
+        font-weight:500;
         background-color: #ffffff;
-        padding: 20px;
+        padding: 10px;
     }
 
     .slider {
-        display: flex;
+        background-color: black;
 
-            .left {
-                text-align: center;
-                width: 50%;
-            }
-            .right {
-                text-align: center;
-                width: 50%;
-            }
+        a {
+            color: white;
+            width: 50%;
+        }
+
+        a:hover{
+            margin: 0;
+            background-color:#d58e32;
+        }
         }
     }
+
+@media (max-width: 767px) {
+    .endPromo {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 46%;
+    }
+
+    .leftCol {
+        display: none;
+    }
+    
+    .rightCol {
+        width: 100%;
+        float: none;
+
+        .shopNow {
+            font-size: 15px;
+            text-decoration: none;
+            position: absolute;
+            text-align: center;
+            top: 70%;
+            left: 50%;
+            width: 25%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-weight: 500;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .rightCol {
+        width: 100%;
+        float: none;
+
+        .shopNow {
+            font-size: 15px;
+            text-decoration: none;
+            position: absolute;
+            text-align: center;
+            top: 70%;
+            left: 50%;
+            width: 35%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-weight: 500;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    }
+}
