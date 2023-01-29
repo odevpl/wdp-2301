@@ -41,7 +41,7 @@ const PromotionBoxes = () => {
       <li key={dots}>
         <a
           onClick={() => handlePageChange(i)}
-          className={i === activePageLeft && styles.active}
+          className={i === activePageLeft ? styles.active : ''}
         >
           page {i}
         </a>
