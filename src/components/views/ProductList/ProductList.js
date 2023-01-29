@@ -3,6 +3,7 @@ import FilterCategory from '../FilterCategory/FilterCategory';
 import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
 // import PropTypes from 'prop-types';
 //import styles from './ProductList.module.scss';
+import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 const ProductList = () => {
   return (
@@ -11,9 +12,12 @@ const ProductList = () => {
         <div className='col'>Banner</div>
       </div>
       <div className='row'>
-        <div className='col-9'>Product List</div>
-        <div className='col-3'></div>
-        <FilterCategory />
+        <div className='col-9'>
+          <NewFurniture countProducts={12} />
+        </div>
+        <div className='col-3'>
+          <FilterCategory />
+        </div>
       </div>
       <div className='row'>
         <div className='col'>
