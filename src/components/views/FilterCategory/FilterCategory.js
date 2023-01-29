@@ -8,7 +8,7 @@ const FilterCategory = () => {
     <div className='container'>
       <div className='row'>
         <div className='col'></div>
-        <div className='col-4'>
+        <div>
           <h5>FILTER BY CATEGORIES</h5>
           <hr />
           <div className={styles.root}>
