@@ -95,13 +95,17 @@
         line-height: 40px;
         width: 100%;
     }
+
+
     
     .leftPhoto {
 
         img {
+            position: relative;
             object-fit: cover;
             width: 100%;
-            height: 50vh;
+            height: 100%;
+            margin-bottom: -50px;
         }
 
         .addCart {
@@ -223,10 +227,13 @@
 
 .rightCol {
     position: relative;
+    width: 725px;
+    height: 450px;
 
     img {
-        width: 700px;
-        height: 450px;
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
     
     .rightTitle {

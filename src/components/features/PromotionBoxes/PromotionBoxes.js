@@ -186,10 +186,10 @@ const PromotionBoxes = () => {
             </div>
           </div>
 
-          <div className={fadeRight ? styles.fadeIn : styles.fadeOut}>
-            {hotDeals.slice(activePageRight, activePageRight + 1).map(hotDeal => (
-              <div key={hotDeal.id} className='col'>
-                <div className={styles.rightCol}>
+          <div className='col-12 col-sm-12 col-md-6 col-lg-8'>
+            <div className={fadeRight ? styles.fadeIn : styles.fadeOut}>
+              {hotDeals.slice(activePageRight, activePageRight + 1).map(hotDeal => (
+                <div key={hotDeal.id} className={styles.rightCol}>
                   {hotDeal.photo}
                   <div className={styles.slider}>
                     <Swipeable
@@ -206,8 +206,8 @@ const PromotionBoxes = () => {
                   </div>
                   <Button className={styles.shopNow}>SHOP NOW</Button>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
