@@ -730,6 +730,17 @@ const initialState = {
 
   posts: [
     {
+      id: 'post-1',
+      name: 'Products That Fight Static',
+      photo: (
+        <img src={`${process.env.PUBLIC_URL}/images/blog/blog1.jpg`} alt='blog1' />
+      ),
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
+      date: '15 JAN 2023',
+      comments: '1',
+    },
+    {
       id: 'post-2',
       name: 'Products That Fight Static',
       photo: (
@@ -778,17 +789,6 @@ const initialState = {
       name: 'Products That Fight Static',
       photo: (
         <img src={`${process.env.PUBLIC_URL}/images/blog/blog6.jpg`} alt='blog6' />
-      ),
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
-      date: '15 JAN 2023',
-      comments: '1',
-    },
-    {
-      id: 'post-7',
-      name: 'Products That Fight Static',
-      photo: (
-        <img src={`${process.env.PUBLIC_URL}/images/blog/blog7.jpg`} alt='blog7' />
       ),
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sem quis arcu congue rhoncus. Curabitur ac tortor metus. Nunc ac augue vel tellus eleifend.',
