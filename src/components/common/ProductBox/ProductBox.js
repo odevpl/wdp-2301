@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
 import Popup from '../../features/Popup/Popup';
+import { addProduct } from '../../../redux/cartRedux';
 import useLocalStorage from 'use-local-storage';
 
 const ProductBox = props => {
@@ -44,8 +45,9 @@ const ProductBox = props => {
     setIsFav(!isFav);
   };
 
-  const handleClickProduct = e => {
+  const handleAddProduct = e => {
     e.preventDefault();
+    dispatch(addProduct({ id, name, photo, price }));
   };
 
   const [openModal, setOpenModal] = useState(false);
@@ -57,11 +59,11 @@ const ProductBox = props => {
           {photo}
           {promo && <div className={styles.sale}>{promo}</div>}
         </a>
-        <div className={styles.buttons} onClick={handleClickProduct}>
+        <div className={styles.buttons}>
           <Button variant='small' onClick={e => setOpenModal(true)}>
             Quick View
           </Button>
-          <Button variant='small'>
+          <Button variant='small' onClick={handleAddProduct}>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>

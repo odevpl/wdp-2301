@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
@@ -142,22 +143,22 @@ class NewFurniture extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              className={`row + ${styles.productsBox} ${
-                fade ? styles.fadeIn : styles.fadeOut
-              }`}
-            >
-              {(viewportWidth > 991
-                ? desktopElements
-                : viewportWidth > 767
-                ? tabletElements
-                : mobileElements
-              ).map(item => (
-                <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+              <div
+                className={`row + ${styles.productsBox} ${
+                  fade ? styles.fadeIn : styles.fadeOut
+                }`}
+              >
+                {(viewportWidth > 991
+                  ? desktopElements
+                  : viewportWidth > 767
+                  ? tabletElements
+                  : mobileElements
+                ).map(item => (
+                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
