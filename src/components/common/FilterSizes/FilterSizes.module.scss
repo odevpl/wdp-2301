@@ -4,24 +4,26 @@
   padding: $base-padding 0;
 }
 
-h4 {
+h5 {
     font-size: 15px;
     margin: 5px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 15px;
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
 
-li {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: 600;
+    li {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
 }
 
 .icon {
@@ -51,4 +53,8 @@ span {
 .active {
     color: $orange;
     padding: 0 0 0 15px;
+}
+
+label {
+    padding-right: 5px;
 }
