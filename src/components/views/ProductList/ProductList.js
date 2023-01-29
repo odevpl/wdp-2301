@@ -1,8 +1,8 @@
 import React from 'react';
-import FilterCategory from '../FilterCategory/FilterCategory';
-import FilterSizes from '../FilterSizes/FilterSizes';
+import FilterCategory from '../../common/FilterCategory/FilterCategory';
+import FilterColor from '../../common/FilterColor/FilterColor';
+import FilterSizes from '../../common/FilterSizes/FilterSizes';
 import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
-
 // import PropTypes from 'prop-types';
 //import styles from './ProductList.module.scss';
 
@@ -17,6 +17,7 @@ const ProductList = () => {
         <div className='col-3'></div>
         <FilterCategory />
         <FilterSizes />
+        <FilterColor />
       </div>
       <div className='row'>
         <div className='col'>
