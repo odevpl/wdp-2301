@@ -29,12 +29,14 @@ export const getProductCompare = ({ products }) =>
 export const getCountProductsCompare = ({ products }) =>
   products.filter(product => product.isComparable === true).length;
 
-/* action crators */
 export const addProductCompare = payload => ({ type: ADD_PRODUCT_COMPARE, payload });
 export const removeProductCompare = payload => ({
   type: REMOVE_PRODUCT_COMPARE,
   payload,
 });
+
+export const getHotDeal = ({ products }) =>
+  products.filter(item => item.hotDeal === true);
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -56,7 +58,7 @@ export default function reducer(statePart = [], action = {}) {
         product.id === action.payload.id
           ? {
               ...product,
-              serStars: action.payload.userStars,
+              userStars: action.payload.userStars,
             }
           : product
       );
