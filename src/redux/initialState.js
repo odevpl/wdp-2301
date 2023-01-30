@@ -3,58 +3,43 @@ import React from 'react';
 const initialState = {
   hotDeals: [
     {
-      id: 'aenean-ru-bristique-1',
-      name: 'Aenean Ru Bristique',
-      miniPhoto:
-        'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=600',
-      photo:
-        'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      category: 'bed',
-      oldPrice: 350,
-      price: 300,
-      stars: 2,
-      userStars: 3,
-      promo: 'sale',
-      newFurniture: true,
-      isFavourite: true,
-      isComparable: false,
-      promotion: '20percent',
+      id: 'promote-1',
+      name: 'promote-1',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote1.jpeg`}
+          alt='promote1'
+        />
+      ),
+      title: 'INDOOR',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 50% OF ALL FURNITURE',
     },
     {
-      id: 'aenean-ru-bristique-2',
-      name: 'Aenean Ru Bristique',
-      miniPhoto:
-        'https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=600',
-      photo:
-        'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      category: 'bed',
-      oldPrice: 200,
-      price: 100,
-      stars: 2,
-      userStars: 3,
-      promo: 'sale',
-      newFurniture: true,
-      isFavourite: true,
-      isComparable: false,
-      promotion: '20percent',
+      id: 'promote-2',
+      name: 'promote-2',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote2.jpg`}
+          alt='promote2'
+        />
+      ),
+      title: 'KITCHEN',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 40% OF ALL FURNITURE',
     },
     {
-      id: 'aenean-ru-bristique-2',
-      name: 'Aenean Ru Bristique',
-      miniPhoto:
-        'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&w=600',
-      photo:
-        'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      category: 'bed',
-      oldPrice: 400,
-      price: 250,
-      stars: 2,
-      userStars: 3,
-      promo: 'sale',
-      newFurniture: true,
-      isFavourite: true,
-      isComparable: false,
-      promotion: '20percent',
+      id: 'promote-3',
+      name: 'promote-3',
+      photo: (
+        <img
+          src={`${process.env.PUBLIC_URL}/images/promote/promote3.jpg`}
+          alt='promote3'
+        />
+      ),
+      title: 'GARDEN',
+      subtitle: 'FURNITURE',
+      description: 'SAVE UP TO 60% OF ALL FURNITURE',
     },
   ],
 
@@ -598,6 +583,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
+      hotDeal: true,
       quantity: 1,
     },
     {
@@ -672,6 +658,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
+      hotDeal: true,
       quantity: 1,
     },
     {
@@ -690,6 +677,7 @@ const initialState = {
       newFurniture: true,
       isFavourite: true,
       isComparable: false,
+      hotDeal: true,
       quantity: 1,
     },
     {
