@@ -7,9 +7,9 @@ const FilterColor = () => {
       <div className='row'>
         <div className='col'></div>
         <div className='col-4'>
-          <h5>FILTER BY COLOR</h5>
-          <hr />
           <div className={styles.root}>
+            <h5>FILTER BY COLOR</h5>
+            <hr />
             <ul>
               <li className={styles.active}>
                 <div className={styles.red}></div>
