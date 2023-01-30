@@ -69,7 +69,7 @@ const PromotionBoxes = () => {
       setIsClicked(false);
       return () => clearInterval(interval);
     }
-  }, [activePageLeft]);
+  }, [activePageLeft]); // eslint-disable-line
 
   const leftAction = e => {
     e.preventDefault();
