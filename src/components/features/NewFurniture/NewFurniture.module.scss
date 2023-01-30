@@ -4,7 +4,6 @@
   .panelBar {
     margin-bottom: 30px;
     position: relative;
-    width: 950px;
 
     :global(.row) > * {
       border-bottom: 4px solid #e2e2e2;
@@ -116,21 +115,28 @@
 @media (max-width: 767px) {
   .root {
     .panelBar {
-      :global(.row) > * {
+      :global(.row)>* {
         border-bottom: none;
       }
 
       .heading {
         text-align: center;
         border-bottom: 4px solid #e2e2e2;
+
         &::before {
           display: none;
         }
       }
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
     }
 
     .dots {
-      margin-top: 53px;
+      margin-top: 50px;
     }
 
     .productsBox {
@@ -142,20 +148,30 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .root {
     .panelBar {
-      :global(.row) > * {
+      :global(.row)>* {
         border-bottom: none;
       }
 
       .heading {
         text-align: center;
         border-bottom: 4px solid #e2e2e2;
+
         &::before {
           display: none;
         }
       }
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+      }
     }
+
     .dots {
-      margin-top: 47px;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
     }
 
     .productsBox {
