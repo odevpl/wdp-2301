@@ -36,7 +36,7 @@ class LatestBlog extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
+            <div>
               <div className={'col-auto ' + styles.heading}>
                 <h3>Latest blog</h3>
               </div>
@@ -47,8 +47,8 @@ class LatestBlog extends React.Component {
             </div>
           </div>
           <div className={'row ' + styles.postBox}>
-            {posts.slice(activePage * 3, (activePage + 1) * 3).map(post => (
-              <div key={post.id} className='col-4'>
+            {posts.slice(activePage * 1, activePage + 2).map(post => (
+              <div key={post.id} className='col- col-sm-12 col-md-6 col-lg-6 col-xl-6'>
                 <PostBox {...post} />
               </div>
             ))}

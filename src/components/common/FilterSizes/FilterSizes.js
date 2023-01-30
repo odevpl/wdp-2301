@@ -5,7 +5,7 @@ const FilterSizes = () => {
   return (
     <div className='container'>
       <div className={styles.root}>
-        <div>
+        <div className={styles.heading}>
           <h5>FILTER BY SIZES</h5>
           <hr />
           <ul>
@@ -14,12 +14,13 @@ const FilterSizes = () => {
                 <input className={styles.active} type='checkbox' />
               </label>
               <h4>S</h4>
-              <span className={styles.productCount}>3</span>
+              <div className={styles.productCount}>3</div>
             </li>
             <li>
               <label>
                 <input type='checkbox' />
               </label>
+              <div></div>
               <h4>M </h4>
               <span className={styles.productCount}>3</span>
             </li>

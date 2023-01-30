@@ -2,12 +2,16 @@
 
 .root {
   padding: $base-padding 0;
+
+  .heading {
+    color: white;
+  }
 }
 
-h5 {
+h4 {
     font-size: 15px;
     margin: 5px;
-    font-weight: bold;
+    color: black;
 }
 
 h4 {
@@ -41,13 +45,9 @@ ul {
     text-align: center;
 }
 
-span {
+.active .productCount {
     color: white;
-}
-
-.active span {
-    color: white;
-    background-color: $orange;
+    background-color: #d58e32;
 }
 
 .active {

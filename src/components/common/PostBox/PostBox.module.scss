@@ -16,8 +16,8 @@
   .photo {
     position: relative;
     padding: 10px 0 10px;
-    height: 300px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
 
     img {
       width: 100%;
@@ -26,10 +26,11 @@
     }
 
     .innerPhoto {
+      text-align: center;
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-45%, 120%);
+      transform: translate(-45%, 160%);
       background: white;
       padding: 20px 0;
       width: 310px;
@@ -58,6 +59,23 @@
     .btn {
       padding: 15px 40px;
       font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .root {
+    .photo {
+      .innerPhoto {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        background: white;
+        padding: 20px 0;
+        width: 310px;
+        font-size: 9px;
+      }
     }
   }
 }
