@@ -1,7 +1,5 @@
 @import "../../../styles/settings.scss";
-
-
-  .root {
+.root {
     .panelBar {
       margin-bottom: 30px;
       position: relative;
@@ -152,9 +150,16 @@
       .heading {
         text-align: center;
         border-bottom: 4px solid #e2e2e2;
+
         &::before {
           display: none;
         }
+      }
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
       }
     }
 
@@ -167,6 +172,14 @@
 .productPage {
   .root {
     .panelBar {
+
+      :global(.row)>* {
+        border-bottom: none;
+      }
+
+      .heading {
+        text-align: center;
+        border-bottom: 4px solid #e2e2e2;
       margin-bottom: 30px;
       position: relative;
 
