@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +10,8 @@ import { useDispatch } from 'react-redux';
 import { toggleFavourite } from '../../../redux/productsRedux';
 import Stars from '../Stars/Stars';
 import Popup from '../../features/Popup/Popup';
+import { addProduct } from '../../../redux/cartRedux';
+import useLocalStorage from 'use-local-storage';
 
 const ProductBox = props => {
   const {
@@ -31,13 +33,21 @@ const ProductBox = props => {
   const dispatch = useDispatch();
   const productId = id;
 
+  const [isFav, setIsFav] = useLocalStorage(productId, isFavourite || false);
+
+  useEffect(() => {
+    dispatch(toggleFavourite({ id: productId, isFavorite: isFav }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFav]);
+
   const handleClick = e => {
     e.preventDefault();
-    dispatch(toggleFavourite(productId));
+    setIsFav(!isFav);
   };
 
-  const handleClickProduct = e => {
+  const handleAddProduct = e => {
     e.preventDefault();
+    dispatch(addProduct({ id, name, photo, price }));
   };
 
   const [openModal, setOpenModal] = useState(false);
@@ -49,11 +59,11 @@ const ProductBox = props => {
           {photo}
           {promo && <div className={styles.sale}>{promo}</div>}
         </a>
-        <div className={styles.buttons} onClick={handleClickProduct}>
+        <div className={styles.buttons}>
           <Button variant='small' onClick={e => setOpenModal(true)}>
             Quick View
           </Button>
-          <Button variant='small'>
+          <Button variant='small' onClick={handleAddProduct}>
             <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
           </Button>
         </div>
@@ -73,7 +83,7 @@ const ProductBox = props => {
           <Button
             variant='outline'
             onClick={handleClick}
-            className={clsx(styles.buttonHover, isFavourite && styles.isActive)}
+            className={clsx(styles.buttonHover, isFav ? styles.isActive : '')}
           >
             <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>

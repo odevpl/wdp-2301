@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
@@ -10,6 +11,9 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     pageCount: 0,
     fade: true,
+    countProducts: this.props.countProducts,
+    variant: this.props.variant,
+    classes: [],
   };
 
   handlePageChange(newPage) {
@@ -27,7 +31,7 @@ class NewFurniture extends React.Component {
   getCurrentPageCountLength = () => {
     let length =
       this.props.products.filter(item => item.category === this.state.activeCategory)
-        .length / 8;
+        .length / this.state.countProducts;
     return length;
   };
 
@@ -65,20 +69,27 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products, viewportWidth } = this.props;
-    const { activeCategory, activePage, fade } = this.state;
+    const {
+      activeCategory,
+      activePage,
+      fade,
+      countProducts,
+      variant,
+      classes,
+    } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(
       viewportWidth > 991
-        ? categoryProducts.length / 8
+        ? categoryProducts.length / countProducts
         : viewportWidth > 767
         ? categoryProducts.length / 2
         : categoryProducts.length / 1
     );
 
     const desktopElements = categoryProducts.slice(
-      activePage * 8,
-      (activePage + 1) * 8
+      activePage * countProducts,
+      (activePage + 1) * countProducts
     );
     const tabletElements = categoryProducts.slice(activePage * 2, (activePage + 1) * 2);
     const mobileElements = categoryProducts.slice(activePage * 1, (activePage + 1) * 1);
@@ -89,7 +100,7 @@ class NewFurniture extends React.Component {
         <li key={dots}>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </a>
@@ -97,52 +108,57 @@ class NewFurniture extends React.Component {
       );
     }
 
+    if (variant) classes.push(styles[variant]);
+    else classes.push(styles.main);
+
     return (
       <Swipeable
         leftAction={this.leftAction.bind(this)}
         rightAction={this.rightAction.bind(this)}
       >
-        <div className={styles.root}>
-          <div className='container'>
-            <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
-                <div className={'col-auto ' + styles.heading}>
-                  <h3>New furniture</h3>
-                </div>
-                <div className={'col ' + styles.menu}>
-                  <ul>
-                    {categories.map(item => (
-                      <li key={item.id}>
-                        <a
-                          className={item.id === activeCategory && styles.active}
-                          onClick={() => this.handleCategoryChange(item.id)}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={'col-auto ' + styles.dots}>
-                  <ul>{dots}</ul>
+        <div className={classes.join(' ')}>
+          <div className={styles.root}>
+            <div className='container'>
+              <div className={styles.panelBar}>
+                <div className='row no-gutters align-items-end'>
+                  <div className={'col-auto ' + styles.heading}>
+                    <h3>New furniture</h3>
+                  </div>
+                  <div className={'col ' + styles.menu}>
+                    <ul>
+                      {categories.map(item => (
+                        <li key={item.id}>
+                          <a
+                            className={item.id === activeCategory ? styles.active : ''}
+                            onClick={() => this.handleCategoryChange(item.id)}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={'col-auto ' + styles.dots}>
+                    <ul>{dots}</ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className={`row + ${styles.productsBox} ${
-                fade ? styles.fadeIn : styles.fadeOut
-              }`}
-            >
-              {(viewportWidth > 991
-                ? desktopElements
-                : viewportWidth > 767
-                ? tabletElements
-                : mobileElements
-              ).map(item => (
-                <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+              <div
+                className={`row + ${styles.productsBox} ${
+                  fade ? styles.fadeIn : styles.fadeOut
+                }`}
+              >
+                {(viewportWidth > 991
+                  ? desktopElements
+                  : viewportWidth > 767
+                  ? tabletElements
+                  : mobileElements
+                ).map(item => (
+                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -172,6 +188,9 @@ NewFurniture.propTypes = {
     })
   ),
   viewportWidth: PropTypes.number,
+  countProducts: PropTypes.number,
+  activePage: PropTypes.number,
+  variant: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
