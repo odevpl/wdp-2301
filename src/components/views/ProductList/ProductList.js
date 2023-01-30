@@ -1,6 +1,7 @@
 import React from 'react';
 import FilterCategory from '../../common/FilterCategory/FilterCategory';
 import FilterColor from '../../common/FilterColor/FilterColor';
+import FilterPrice from '../../common/FilterPrice/FilterPrice';
 import FilterSizes from '../../common/FilterSizes/FilterSizes';
 import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
 // import PropTypes from 'prop-types';
@@ -19,9 +20,10 @@ const ProductList = () => {
             <NewFurniture countProducts={12} />
           </div>
           <div className='col-4'>
-            <FilterCategory className={styles.filter} />
-            <FilterSizes className={styles.filter} />
-            <FilterColor className={styles.filter} />
+            <FilterCategory />
+            <FilterPrice />
+            <FilterColor />
+            <FilterSizes />
           </div>
         </div>
         <div className='row'>

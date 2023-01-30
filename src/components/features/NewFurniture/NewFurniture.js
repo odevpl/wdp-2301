@@ -120,7 +120,7 @@ class NewFurniture extends React.Component {
           <div className={styles.root}>
             <div className='container'>
               <div className={styles.panelBar}>
-                <div className='row no-gutters align-items-end'>
+                <div className='row'>
                   <div className={'col-auto ' + styles.heading}>
                     <h3>New furniture</h3>
                   </div>
