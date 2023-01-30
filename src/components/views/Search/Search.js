@@ -4,7 +4,7 @@ import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 const Search = () => (
   <div className={styles.root}>
-    <NewFurniture />
+    <NewFurniture countProducts={12} />
   </div>
 );
 
