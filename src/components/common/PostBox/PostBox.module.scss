@@ -26,6 +26,7 @@
     }
 
     .innerPhoto {
+      text-align: center;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -62,6 +63,25 @@
     .btn {
       padding: 15px 40px;
       font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .photo {
+      width: 345px;
+      .innerPhoto {
+        top: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .root {
+    .photo {
+      width: 340px;
     }
   }
 }
