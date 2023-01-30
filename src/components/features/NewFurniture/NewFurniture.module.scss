@@ -1,5 +1,16 @@
 @import "../../../styles/settings.scss";
 
+
+.root {
+  .panelBar {
+    margin-bottom: 30px;
+    position: relative;
+
+    :global(.row) > * {
+      border-bottom: 4px solid #e2e2e2;
+    }
+   }
+  }
 .main {
   .root {
     .panelBar {
@@ -144,19 +155,28 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .root {
     .panelBar {
-      :global(.row) > * {
+      :global(.row)>* {
         border-bottom: none;
       }
 
       .heading {
         text-align: center;
         border-bottom: 4px solid #e2e2e2;
+
         &::before {
           display: none;
         }
       }
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
     }
     .dots {
+
+      margin-top: 50px;
       margin-top: 47px;
     }
 
@@ -169,6 +189,14 @@
 .productPage {
   .root {
     .panelBar {
+
+      :global(.row)>* {
+        border-bottom: none;
+      }
+
+      .heading {
+        text-align: center;
+        border-bottom: 4px solid #e2e2e2;
       margin-bottom: 30px;
       position: relative;
       width: 950px;
@@ -233,6 +261,20 @@
           }
         }
       }
+
+
+      .menu ul {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+      }
+    }
+
+    .dots {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+    }
 
       .dots {
         position: absolute;
