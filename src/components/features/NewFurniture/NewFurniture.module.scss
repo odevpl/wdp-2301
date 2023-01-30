@@ -1,22 +1,9 @@
 @import "../../../styles/settings.scss";
-
-
 .root {
-  .panelBar {
-    margin-bottom: 30px;
-    position: relative;
-
-    :global(.row) > * {
-      border-bottom: 4px solid #e2e2e2;
-    }
-   }
-  }
-.main {
-  .root {
     .panelBar {
       margin-bottom: 30px;
       position: relative;
-      width: 950px;
+      width: 100%;
 
       :global(.row) > * {
         border-bottom: 4px solid #e2e2e2;
@@ -47,6 +34,8 @@
       .menu {
         text-align: center;
         ul {
+          display: flex;
+          justify-content: end;
           margin: 0;
           padding: 0;
           list-style: none;
@@ -79,16 +68,11 @@
       }
 
       .dots {
-        position: absolute;
-        right: 0;
-        top: 0;
 
         ul {
-          margin: 0;
-          padding: 0 0 0 1rem;
           list-style: none;
-          background-color: #ffffff;
-          transform: translateY(15px);
+          text-align: center;
+          margin-bottom: 15px;
 
           li {
             display: inline-block;
@@ -110,7 +94,6 @@
             }
           }
         }
-      }
     }
   }
 }
@@ -130,7 +113,9 @@
     .root {
       .panelBar {
         :global(.row) > * {
-          border-bottom: none;
+          display: flex;
+          width: 100%;
+          justify-content: center;
         }
 
         .heading {
@@ -143,7 +128,8 @@
       }
 
       .dots {
-        margin-top: 53px;
+        display: flex;
+        margin-top: 0px;
       }
 
       .productsBox {
@@ -155,8 +141,10 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .root {
     .panelBar {
-      :global(.row)>* {
-        border-bottom: none;
+      :global(.row) > * {
+        display: flex;
+        width: 100%;
+        justify-content: center;
       }
 
       .heading {
@@ -173,11 +161,6 @@
         justify-content: center;
         margin-bottom: 20px;
       }
-    }
-    .dots {
-
-      margin-top: 50px;
-      margin-top: 47px;
     }
 
     .productsBox {
@@ -199,7 +182,6 @@
         border-bottom: 4px solid #e2e2e2;
       margin-bottom: 30px;
       position: relative;
-      width: 950px;
 
       :global(.row) > * {
         border-bottom: 4px solid #e2e2e2;
@@ -262,31 +244,11 @@
         }
       }
 
-
-      .menu ul {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-      }
-    }
-
-    .dots {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-    }
-
-      .dots {
-        position: absolute;
-        right: 0;
-        top: 0;
-
         ul {
           margin: 0;
           padding: 0 0 0 1rem;
           list-style: none;
-          background-color: #ffffff;
-          transform: translateY(15px);
+          transform: translateY(-5px);
 
           li {
             display: inline-block;
@@ -311,4 +273,3 @@
       }
     }
   }
-}
