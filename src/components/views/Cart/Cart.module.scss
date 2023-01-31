@@ -1,10 +1,10 @@
 @import "../../../styles/settings.scss";
 
+.root {
+  padding: 20px;
+}
+
 .templace{
-  display: flex;
-  justify-content: space-around;
-  border-top: 0.5px solid #d7d6d6;
-  margin: 20px 50px 0 50px;
 
   .theTemplace{
     margin: 20px;
@@ -35,20 +35,40 @@
   }
 
   .cart{
-    display: flex;
     font-size: 20px;
     padding-top: 14px;
   }
 }
 
 .productsContainer {
-  margin: 50px 220px 50px 220px;
-  padding: 15px;
+  padding: 10px;
   display: flex;
   justify-content: center;
+  text-align: center;
 
-  table{
-    width: 1000px;
+  input {
+    margin-bottom: 10px;
+  }
+
+  .btnApply {
+    color: white;
+    text-transform: uppercase;
+    background-color: $primary;
+    padding: 7px;
+    border-radius: 3px;
+    margin: 5px;
+  }
+
+  .btnUpdate{
+    text-transform: uppercase;
+    margin-left: auto;
+    color: white;
+    background-color: #d58e32;
+    padding: 7px;
+    margin-right: 10px;
+    margin: 0 15px;
+    border-radius: 3px;
+  }
 
     img{
       object-fit: cover;
@@ -56,17 +76,10 @@
       height: 80px;
       margin: 10px;
       background-color: #9e9e9e;
-    }
   }
 
   th {
     font-weight: 500;
-  }
-  thead {
-    .productTh {
-      margin-left: -10px;
-      padding-left: 200px;
-    }
   }
 }
 
@@ -89,7 +102,6 @@ button{
 .productTableHead, tr{
   background-color: white;
   border: 1px solid #d7d6d6;
-  border-left: none;
 }
 
 .productTableHead, th {
@@ -125,40 +137,14 @@ button{
   }
 }
 
-.couponContainer {
-  display: flex;
-  align-items: center;
-  margin: -65px 478px 0px 478px;
-  padding: 10px 10px;
-  border-top: 1px solid #d7d6d6;
-  border-bottom: 1px solid #d7d6d6;
-
-  .btnApply {
-    color: black;
-    background-color: $primary;
-    padding: 7px;
-    border-radius: 3px;
-  }
-
-  .btnUpdate{
-    margin-left: auto;
-    color: black;
-    background-color: $primary;
-    padding: 7px;
-    border-radius: 3px;
-  }
-
-  .input {
-    width: 150px;
-    margin: 0 0.5rem;
-    height: 2rem;
-  }
-}
-
 .proceedContainer{
-  margin-top: 30px;
   display: flex;
-  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+
+  .containerProceed {
+
+  }
 
   .cartTotal{
     font-weight: 500;
@@ -166,24 +152,6 @@ button{
 
   a{
     text-decoration: none;
-  }
-
-  button {
-    background-color: $primary;
-    color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin: 10px;
-    width: 100%;
-    margin-left: 4%;
-    border-radius: 3px;
-
-    &:hover{
-      background-color: rgb(9, 174, 9);
-      opacity: 1;
-    }
   }
 
   .subtotal {
@@ -195,12 +163,24 @@ button{
     margin-left: 4%;
     padding-left: 3%;
   }
+
+  .btnCheck {
+    background-color: $primary;
+    color: white;
+    display: inline;
+    border-radius: 3px;
+  
+    &:hover{
+      color: white;
+      background-color: rgb(9, 174, 9);
+      opacity: 1;
+    }
+  }
 }
 
 .tableBody {
 
   .product {
-    display: flex;
     align-items: center;
     padding: 20px;
     font-size: 14px;
@@ -221,10 +201,3 @@ button{
     margin-right: 5%;
   }
 }
-
-
-
-
-
-
-
