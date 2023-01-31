@@ -7,14 +7,13 @@ import BrandBoxes from '../../features/BrandBoxes/BrandBoxes';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+import Banner from '../Banner/Banner';
 
 const ProductList = () => {
   return (
     <div className={styles.root}>
       <div className='container'>
-        <div className='row'>
-          <div className='col'>Banner</div>
-        </div>
+        <Banner />
         <div className='row'>
           <div className='col-8'>
             <NewFurniture countProducts={12} />
