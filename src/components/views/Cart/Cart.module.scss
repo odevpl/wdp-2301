@@ -169,7 +169,7 @@ button{
     color: white;
     display: inline;
     border-radius: 3px;
-  
+
     &:hover{
       color: white;
       background-color: rgb(9, 174, 9);
@@ -181,6 +181,7 @@ button{
 .tableBody {
 
   .product {
+    display: flex;
     align-items: center;
     padding: 20px;
     font-size: 14px;
@@ -199,5 +200,13 @@ button{
   .photo {
     margin-left: 5%;
     margin-right: 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .tableBody{
+    .product{
+      display: block;
+    }
   }
 }

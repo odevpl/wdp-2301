@@ -71,7 +71,7 @@ const Cart = () => {
           </a>
         </div>
         <div className={styles.productsContainer}>
-          <table className='col-xl-6 col-lg-8 col-md-10 col-sm-10 col-xs-3'>
+          <table className='col-xl-12 col-lg-8 col-md-10 col-sm-10 col-xs-3'>
             <thead className={styles.productTableHead + 'row'}>
               <tr className={styles.product}>
                 <th className={styles.productTh}>PRODUCT</th>
