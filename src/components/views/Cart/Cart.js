@@ -11,6 +11,7 @@ import {
   decreaseQuantity,
   updateTotalPrice,
 } from '../../../redux/cartRedux';
+import Button from '../../common/Button/Button';
 
 const Cart = () => {
   const productsInCart = useSelector(getAll);
@@ -56,109 +57,102 @@ const Cart = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.templace}>
-        <p className={styles.theTemplace}>The templace</p>
-        <p></p>
-      </div>
-      <div className={styles.cartContainer}>
-        <p className={styles.cart}>Cart</p>
-        <a href='/' className={styles.cartLink + ' row'}>
-          <FontAwesomeIcon className={styles.icon} icon={faHome} />
-          <p>{'>'} Cart</p>
-        </a>
-      </div>
-      <div className={styles.productsContainer + ' row'}>
-        <table className={styles.productTable + ' col-8'}>
-          <thead className={styles.productTableHead}>
-            <tr className={styles.product}>
-              <th scope='col' className={styles.productTh}>
-                PRODUCT
-              </th>
-              <th scope='col'>PRICE</th>
-              <th scope='col'>QUANTITY</th>
-              <th scope='col'>TOTAL</th>
-            </tr>
-          </thead>
-          <tbody className={styles.tableBody}>
-            {productsInCart.map(product => (
-              <tr key={product.id}>
-                <th scope='row' className={styles.product}>
-                  <button onClick={() => handleDelete(product.id)}>
-                    <FontAwesomeIcon className={styles.icon} icon={faTimesCircle} />
-                  </button>
-                  <div className={styles.photo}>{product.photo}</div>
-                  {product.name}
-                </th>
-                <td className={styles.priceStyle + ' align-middle'}>
-                  $ {product.price}
-                </td>
-                <td className='align-middle'>
-                  <div className={styles.quantityContainer}>
-                    <button
-                      className={styles.quantity}
-                      onClick={() => increaseProductQuantity(product.id)}
-                    >
-                      +
-                    </button>
-                    <div className={styles.quantityCount}>
-                      <span className={styles.numberOfProducts}>
-                        {' '}
-                        {product.quantity}{' '}
-                      </span>
-                    </div>
-                    <button
-                      className={styles.quantity}
-                      onClick={() => decreaseProductQuantity(product.id)}
-                    >
-                      -
-                    </button>
-                  </div>
-                </td>
-                <td className={styles.priceStyle + ' align-middle'}>
-                  $ {getTotalPriceForProduct(product)}
-                </td>
+    <div className='container'>
+      <div className={styles.root}>
+        <div className={styles.templace}>
+          <p className={styles.theTemplace}>The templace</p>
+          <p></p>
+        </div>
+        <div className={styles.cartContainer}>
+          <p className={styles.cart}>Cart</p>
+          <a href='/' className={styles.cartLink + ' row'}>
+            <FontAwesomeIcon className={styles.icon} icon={faHome} />
+            <p>{'>'} Cart</p>
+          </a>
+        </div>
+        <div className={styles.productsContainer}>
+          <table
+            className={
+              styles.productTable + 'col-xl-6 col-lg-8 col-md-10 col-sm-10 col-xs-3'
+            }
+          >
+            <thead className={styles.productTableHead + 'row'}>
+              <tr className={styles.product}>
+                <th className={styles.productTh}>PRODUCT</th>
+                <th scope='col'>PRICE</th>
+                <th scope='col'>QUANTITY</th>
+                <th scope='col'>TOTAL</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className={styles.couponContainer}>
-        <input type='text' placeholder='Coupon code' className={styles.input} />
-        <button className={styles.btnApply}> Apply Coupon </button>
-        <button className={styles.btnUpdate}> Update Cart </button>
-      </div>
-      <div className='row justify-content-end'>
-        <div className={styles.proceedContainer + ' col-6'}>
-          <table className='col-6'>
+            </thead>
+            <tbody className={styles.tableBody}>
+              {productsInCart.map(product => (
+                <tr key={product.id}>
+                  <th scope='row' className={styles.product}>
+                    <button onClick={() => handleDelete(product.id)}>
+                      <FontAwesomeIcon className={styles.icon} icon={faTimesCircle} />
+                    </button>
+                    <div className={styles.photo}>{product.photo}</div>
+                    {product.name}
+                  </th>
+                  <td className={styles.priceStyle + ' align-middle'}>
+                    $ {product.price}
+                  </td>
+                  <td className='align-middle'>
+                    <div className={styles.quantityContainer}>
+                      <button
+                        className={styles.quantity}
+                        onClick={() => increaseProductQuantity(product.id)}
+                      >
+                        +
+                      </button>
+                      <div className={styles.quantityCount}>
+                        <span className={styles.numberOfProducts}>
+                          {' '}
+                          {product.quantity}{' '}
+                        </span>
+                      </div>
+                      <button
+                        className={styles.quantity}
+                        onClick={() => decreaseProductQuantity(product.id)}
+                      >
+                        -
+                      </button>
+                    </div>
+                  </td>
+                  <td className={styles.priceStyle + ' align-middle'}>
+                    $ {getTotalPriceForProduct(product)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className={styles.proceedContainer + ' row'}>
+          <table
+            className={styles.containerProceed + 'col-xl-10 col-lg-3 col-sm-5 my-3'}
+          >
             <thead>
               <tr>
                 <th scope='col'></th>
-                <th scope='col' className={styles.cartTotal}>
-                  Cart totals
-                </th>
+                <th scope='col'>Cart Totals</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className={'border-right col-5 ' + styles.subtotal}>Subtotal</td>
+                <td className={'border-right' + styles.subtotal}>Subtotal</td>
                 <td className={styles.priceStyle}>${getSubtotalPrice()}</td>
               </tr>
               <tr>
-                <td className={'border-right col-5 ' + styles.subtotal}>Total</td>
+                <td className={'border-right' + styles.subtotal}>Total</td>
                 <td className={styles.priceStyle}>${getTotalPrice()}</td>
-              </tr>
-              <tr>
-                <td colSpan='2'>
-                  <a href='/' className={''}>
-                    <button type='submit' className={'col-11'} onClick={clearCartPage}>
-                      PROCEED TO CHECKOUT
-                    </button>
-                  </a>
-                </td>
               </tr>
             </tbody>
           </table>
+          <div className='col-12'>
+            <button className={styles.btnCheck} type='submit' onClick={clearCartPage}>
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
         </div>
       </div>
     </div>
