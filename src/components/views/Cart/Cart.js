@@ -3,7 +3,14 @@ import React from 'react';
 import styles from './Cart.module.scss';
 import { faHome, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeProduct, getAll, clearCart } from '../../../redux/cartRedux';
+import {
+  removeProduct,
+  getAll,
+  clearCart,
+  increaseQuantity,
+  decreaseQuantity,
+  updateTotalPrice,
+} from '../../../redux/cartRedux';
 
 const Cart = () => {
   const productsInCart = useSelector(getAll);
@@ -15,6 +22,37 @@ const Cart = () => {
 
   const clearCartPage = () => {
     dispatch(clearCart([]));
+  };
+
+  const increaseProductQuantity = cart_id => {
+    dispatch(increaseQuantity(cart_id));
+    dispatch(updateTotalPrice(cart_id));
+  };
+
+  const decreaseProductQuantity = cart_id => {
+    dispatch(decreaseQuantity(cart_id));
+    dispatch(updateTotalPrice(cart_id));
+  };
+
+  const getSubtotalPrice = () => {
+    let subtotalPrice = 0;
+    productsInCart.map(
+      product => (subtotalPrice = subtotalPrice + product.price * product.quantity)
+    );
+
+    return subtotalPrice;
+  };
+
+  const getTotalPrice = () => {
+    let total = getSubtotalPrice();
+
+    if (total === 0) return 0;
+
+    return total + 20;
+  };
+
+  const getTotalPriceForProduct = product => {
+    return product.quantity * product.price;
   };
 
   return (
@@ -57,15 +95,28 @@ const Cart = () => {
                 </td>
                 <td className='align-middle'>
                   <div className={styles.quantityContainer}>
-                    <button className={styles.quantity}>+</button>
+                    <button
+                      className={styles.quantity}
+                      onClick={() => increaseProductQuantity(product.id)}
+                    >
+                      +
+                    </button>
                     <div className={styles.quantityCount}>
-                      <span className={styles.numberOfProducts}> 1 </span>
+                      <span className={styles.numberOfProducts}>
+                        {' '}
+                        {product.quantity}{' '}
+                      </span>
                     </div>
-                    <button className={styles.quantity}>-</button>
+                    <button
+                      className={styles.quantity}
+                      onClick={() => decreaseProductQuantity(product.id)}
+                    >
+                      -
+                    </button>
                   </div>
                 </td>
                 <td className={styles.priceStyle + ' align-middle'}>
-                  $ {product.price}
+                  $ {getTotalPriceForProduct(product)}
                 </td>
               </tr>
             ))}
@@ -91,11 +142,11 @@ const Cart = () => {
             <tbody>
               <tr>
                 <td className={'border-right col-5 ' + styles.subtotal}>Subtotal</td>
-                <td className={styles.priceStyle}>$92.00</td>
+                <td className={styles.priceStyle}>${getSubtotalPrice()}</td>
               </tr>
               <tr>
                 <td className={'border-right col-5 ' + styles.subtotal}>Total</td>
-                <td className={styles.priceStyle}>$92.00</td>
+                <td className={styles.priceStyle}>${getTotalPrice()}</td>
               </tr>
               <tr>
                 <td colSpan='2'>

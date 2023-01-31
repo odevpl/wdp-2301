@@ -28,6 +28,7 @@ const ProductBox = props => {
     addProductCompare,
     removeProductCompare,
     countProductsCompare,
+    quantity,
   } = props;
 
   const dispatch = useDispatch();
@@ -47,7 +48,7 @@ const ProductBox = props => {
 
   const handleAddProduct = e => {
     e.preventDefault();
-    dispatch(addProduct({ id, name, photo, price }));
+    dispatch(addProduct({ id, name, photo, price, quantity }));
   };
 
   const [openModal, setOpenModal] = useState(false);
@@ -128,6 +129,7 @@ ProductBox.propTypes = {
   addProductCompare: PropTypes.func,
   removeProductCompare: PropTypes.func,
   countProductsCompare: PropTypes.func,
+  quantity: PropTypes.number,
 };
 
 export default ProductBox;
